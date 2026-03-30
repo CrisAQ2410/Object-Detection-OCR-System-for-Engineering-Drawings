@@ -1,8 +1,3 @@
-# Ignore dataset
-Dataset/
-dataset/
-*.zip
-
 # Visual Studio Code
 .vscode/
 
@@ -11,7 +6,3 @@ venv/
 env/
 __pycache__/
 *.pyc
-
-# Local script output logs/json
-src/output/
-output/

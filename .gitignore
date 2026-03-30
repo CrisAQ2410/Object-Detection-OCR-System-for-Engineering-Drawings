@@ -1,0 +1,17 @@
+# Ignore dataset
+Dataset/
+dataset/
+*.zip
+
+# Visual Studio Code
+.vscode/
+
+# Virtual Environment
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Local script output logs/json
+src/output/
+output/

@@ -11,20 +11,9 @@ import cv2
 from PIL import Image, ImageOps
 import gradio as gr
 
-import subprocess
-import sys
-
-# Bơm thư viện nhúng cực mạnh cho Hugging Face Spaces
-try:
-    import detectron2
-except ImportError:
-    print("\n[+] Bắt đầu Build nguồn Detectron2 trực tiếp (Tắt Build Isolation)...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "ninja"])
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-build-isolation", "git+https://github.com/facebookresearch/detectron2.git"])
-    import detectron2
-
 try:
     import torch
+    import detectron2
     from detectron2.engine import DefaultPredictor
     from detectron2.config import get_cfg
     from detectron2 import model_zoo

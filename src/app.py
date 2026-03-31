@@ -43,10 +43,13 @@ def init_models():
     # 1. Detectron2 Engine Load (Fast R-CNN)
     weights_path = "./output/model/model_final.pth"
     if not os.path.exists(weights_path):
-        # Fallback thử path tuyệt đối nếu cấu hình môi trường nằm ở src
         alt_path = Path(__file__).parent / "output/model/model_final.pth"
         if alt_path.exists():
             weights_path = str(alt_path)
+    if not os.path.exists(weights_path):
+        # Fallback siêu mạnh: Nằm ngay ngoài gốc của Hugging Face
+        if os.path.exists("model_final.pth"):
+            weights_path = "model_final.pth"
 
     if not os.path.exists(weights_path):
         print(f"[!] ❌ KHÔNG THỂ KHỞI TẠO! Thiếu tệp Trọng số: {weights_path}")

@@ -11,16 +11,25 @@ import cv2
 from PIL import Image, ImageOps
 import gradio as gr
 
+import subprocess
+
+# Bơm thư viện nhúng cực mạnh cho Hugging Face Spaces
+try:
+    import detectron2
+except ImportError:
+    print("\n[+] Bắt đầu Build nguồn Detectron2 trực tiếp (Cách ly khởi chạy)...")
+    subprocess.check_call(["pip", "install", "git+https://github.com/facebookresearch/detectron2.git"])
+    import detectron2
+
 try:
     import torch
-    import detectron2
     from detectron2.engine import DefaultPredictor
     from detectron2.config import get_cfg
     from detectron2 import model_zoo
     from detectron2.data import MetadataCatalog
     from detectron2.utils.visualizer import Visualizer, ColorMode
-except ImportError:
-    print("[!] CẢNH BÁO: Không có thư viện Detectron2.")
+except ImportError as e:
+    print(f"[!] CẢNH BÁO: Lỗi cực nặng khi kết xuất Import: {e}")
 
 try:
     from paddleocr import PaddleOCR

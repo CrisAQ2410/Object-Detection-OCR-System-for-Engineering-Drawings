@@ -133,7 +133,7 @@ class CustomTrainer(DefaultTrainer):
             T.RandomFlip(prob=0.5, horizontal=True, vertical=False),
             T.RandomBrightness(0.8, 1.2),
             T.RandomContrast(0.8, 1.2),
-            T.ResizeShortestEdge([640, 672, 704, 736, 768, 800], max_size=1333)
+            T.ResizeShortestEdge([640, 672, 704, 736, 768, 800], max_size=1333, sample_style='choice')
         ])
         return build_detection_train_loader(cfg, mapper=mapper)
         

@@ -263,5 +263,5 @@ with gr.Blocks() as demo:
     )
 
 if __name__ == "__main__":
-    # Cuối cùng chạy Launch server
-    demo.launch(server_name="0.0.0.0", server_port=7860)
+    # Cuối cùng chạy
+    demo.launch()

@@ -84,7 +84,7 @@ def init_models():
         
     # 2. PaddleOCR Engine Load
     try:
-        OCR_ENGINE = PaddleOCR(use_textline_orientation=True, lang='en', use_gpu=False)
+        OCR_ENGINE = PaddleOCR(use_textline_orientation=True, lang='en')
         print("[✓] Máy Chủ Cào Chữ (PaddleOCR) đã Sẵn sàng.")
     except Exception as e:
         print(f"[!] Lỗi khởi chạy Máy Chủ OCR: {e}")

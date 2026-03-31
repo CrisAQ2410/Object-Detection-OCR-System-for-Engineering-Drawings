@@ -6,3 +6,7 @@ venv/
 env/
 __pycache__/
 *.pyc
+
+# Local script output logs/json/models
+src/output/
+output/

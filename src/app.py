@@ -84,7 +84,7 @@ def init_models():
         
     # 2. PaddleOCR Engine Load
     try:
-        OCR_ENGINE = PaddleOCR(use_textline_orientation=True, lang='en', use_gpu=False, show_log=False)
+        OCR_ENGINE = PaddleOCR(use_textline_orientation=True, lang='en', use_gpu=False)
         print("[✓] Máy Chủ Cào Chữ (PaddleOCR) đã Sẵn sàng.")
     except Exception as e:
         print(f"[!] Lỗi khởi chạy Máy Chủ OCR: {e}")
@@ -237,7 +237,7 @@ def analyze_image(img_path):
 # ========================================================
 # GIAO DIỆN WEB GRADIO BLOCKS
 # ========================================================
-with gr.Blocks(theme=gr.themes.Base()) as demo:
+with gr.Blocks() as demo:
     gr.Markdown("# Engineering Drawing Analyzer")
     gr.Markdown("Trích xuất thông minh các Box: Note (Vàng) - Table (Đỏ) - PartDrawing (Xanh xám), tự động Cào text lập Bảng Markdown!")
     

@@ -207,7 +207,7 @@ def analyze_image(img_path):
             
             if crop_img.size > 0:
                 prep_img = preprocess_for_ocr(crop_img, class_name)
-                ocr_res = OCR_ENGINE.ocr(prep_img, cls=True)
+                ocr_res = OCR_ENGINE.ocr(prep_img)
                 
                 text_str = process_note_paddle(ocr_res) if class_name == "Note" else cluster_table_paddle(ocr_res)
                 obj_dict["ocr_content"] = text_str

@@ -13,14 +13,8 @@ import gradio as gr
 
 try:
     import torch
-    import detectron2
-    from detectron2.engine import DefaultPredictor
-    from detectron2.config import get_cfg
-    from detectron2 import model_zoo
-    from detectron2.data import MetadataCatalog
-    from detectron2.utils.visualizer import Visualizer, ColorMode
 except ImportError as e:
-    print(f"[!] CẢNH BÁO: Lỗi cực nặng khi kết xuất Import: {e}")
+    print(f"[!] Lỗi kết xuất mạng Nơ-ron: {e}")
 
 try:
     from paddleocr import PaddleOCR
@@ -40,36 +34,52 @@ THING_COLORS = [(255, 255, 0), (0, 255, 255), (255, 0, 0)]
 def init_models():
     global PREDICTOR, OCR_ENGINE
     
-    # 1. Detectron2 Engine Load (Fast R-CNN)
-    weights_path = "./output/model/model_final.pth"
-    if not os.path.exists(weights_path):
-        alt_path = Path(__file__).parent / "output/model/model_final.pth"
-        if alt_path.exists():
-            weights_path = str(alt_path)
-    if not os.path.exists(weights_path):
-        # Fallback siêu mạnh: Nằm ngay ngoài gốc của Hugging Face
-        if os.path.exists("model_final.pth"):
-            weights_path = "model_final.pth"
+    # Kỹ thuật Lazy Install: Xây Detectron2 trong tĩnh lặng để lừa Timeout của Hugging Face
+    try:
+        import detectron2
+    except ImportError:
+        print("\n⏳ Hệ thống đang lắp ráp Cõi Lõi Detectron2 (Chỉ tốn 3-4 phút lần đầu bật App)...")
+        import subprocess, sys
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "ninja"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-build-isolation", "git+https://github.com/facebookresearch/detectron2.git"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        import detectron2
+        print("[+] Lắp ráp HOÀN TẤT!")
 
-    if not os.path.exists(weights_path):
-        print(f"[!] ❌ KHÔNG THỂ KHỞI TẠO! Thiếu tệp Trọng số: {weights_path}")
-    else:
-        cfg = get_cfg()
-        cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"))
-        cfg.MODEL.ROI_HEADS.NUM_CLASSES = 3
-        cfg.MODEL.WEIGHTS = weights_path
-        cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
-        
-        if not torch.cuda.is_available():
-            cfg.MODEL.DEVICE = 'cpu'
+    from detectron2.engine import DefaultPredictor
+    from detectron2.config import get_cfg
+    from detectron2 import model_zoo
+    from detectron2.data import MetadataCatalog
+    
+    if PREDICTOR is None:
+        # 1. Detectron2 Engine Load (Fast R-CNN)
+        weights_path = "./output/model/model_final.pth"
+        if not os.path.exists(weights_path):
+            alt_path = Path(__file__).parent / "output/model/model_final.pth"
+            if alt_path.exists():
+                weights_path = str(alt_path)
+        if not os.path.exists(weights_path):
+            if os.path.exists("model_final.pth"):
+                weights_path = "model_final.pth"
+
+        if not os.path.exists(weights_path):
+            print(f"[!] ❌ KHÔNG THỂ KHỞI TẠO! Thiếu tệp Trọng số: {weights_path}")
+        else:
+            cfg = get_cfg()
+            cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"))
+            cfg.MODEL.ROI_HEADS.NUM_CLASSES = 3
+            cfg.MODEL.WEIGHTS = weights_path
+            cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
             
-        PREDICTOR = DefaultPredictor(cfg)
-        
-        MetadataCatalog.get("gradio_inference").set(
-            thing_classes=["Note", "PartDrawing", "Table"], 
-            thing_colors=THING_COLORS
-        )
-        print("[✓] Máy Chủ Nhận Diện (Detectron2) đã Sẵn sàng.")
+            if not torch.cuda.is_available():
+                cfg.MODEL.DEVICE = 'cpu'
+                
+            PREDICTOR = DefaultPredictor(cfg)
+            
+            MetadataCatalog.get("gradio_inference").set(
+                thing_classes=["Note", "PartDrawing", "Table"], 
+                thing_colors=THING_COLORS
+            )
+            print("[✓] Máy Chủ Nhận Diện (Detectron2) đã Sẵn sàng.")
         
     # 2. PaddleOCR Engine Load
     try:
@@ -80,8 +90,8 @@ def init_models():
     except Exception as e:
         print(f"[!] Lỗi khởi chạy Máy Chủ OCR: {e}")
 
-# Kích hoạt Nạp Model duy nhất 1 lần khi server Gradio bật
-init_models()
+# Init Model Delay (Bypass Proxy HF timeout)
+# init_models() được ngắt để chuyển vào luồng Inference
 
 
 # ========================================================
@@ -153,8 +163,11 @@ def preprocess_for_ocr(crop_img, obj_class):
 # CORE PIPELINE KHI NHẤN BUTTON GRADIO
 # ========================================================
 def analyze_image(img_path):
+    if PREDICTOR is None or OCR_ENGINE is None:
+        init_models()
+        
     if PREDICTOR is None:
-        return None, {"error": "Trọng số Detectron2 bị mất. Xem lại console."}, "Lỗi: KHÔNG có MODEL_FINAL.PTH.\nHãy chắc chắn ./output/model/model_final.pth hiện hữu trên Hugging Face Spaces!"
+        return None, {"error": "Trọng số Detectron2 bị mất."}, "Lỗi: KHÔNG có MODEL_FINAL.PTH trên HuggingFace Spaces!"
         
     if not img_path:
         return None, {}, "Vui lòng tải ảnh lên trước khi phân tích."
@@ -163,6 +176,9 @@ def analyze_image(img_path):
     with Image.open(img_path) as pil_img:
         pil_img = ImageOps.exif_transpose(pil_img).convert('RGB')
         img_bgr = np.array(pil_img)[:, :, ::-1]
+        
+    from detectron2.utils.visualizer import Visualizer, ColorMode
+    from detectron2.data import MetadataCatalog
         
     # [1] Phân tích Predict BBox
     outputs = PREDICTOR(img_bgr)

@@ -236,7 +236,7 @@ def execute_ocr(img, use_gpu, obj_class):
             import logging
             logging.getLogger('ppocr').setLevel(logging.ERROR)
             
-            ocr_engines['paddle'] = PaddleOCR(use_angle_cls=True, lang='en', use_gpu=use_gpu, show_log=False)
+            ocr_engines['paddle'] = PaddleOCR(use_textline_orientation=True, lang='en', use_gpu=use_gpu, show_log=False)
             
         paddle = ocr_engines['paddle']
         ocr_result = paddle.ocr(img, cls=True)

@@ -43,19 +43,17 @@ def get_drawing_dicts(json_path, dataset_dir):
     """
     Đọc COCO Json và map lại tên file (ví dụ "53_jpg.rf.xxx") về đúng file gốc.
     Ngoài ra parse các toạ độ float theo chuẩn detectron2 BoxMode.XYWH_ABS.
+    Khôi phục tọa độ BBox cho khớp với kích thước ảnh gốc chưa resize.
     """
     with open(json_path, 'r', encoding='utf-8') as f:
         coco_data = json.load(f)
 
     dataset_path = Path(dataset_dir)
-    # Lấy toàn bộ filepath thực tế có sẵn trên ổ cứng 
     real_files = list(dataset_path.rglob('*.*'))
     
-    # Sắp xếp theo tên dài nhất trên đầu, để match prefix chống dẫm chân (VD: '14' nằm sau '144')
     sorted_real_files = sorted([f for f in real_files if f.suffix.lower() in {'.jpg', '.jpeg', '.png', '.webp'}], 
                                key=lambda x: len(x.stem), reverse=True)
 
-    # Gom nhóm annotation theo image id
     from collections import defaultdict
     annos_by_img = defaultdict(list)
     for ann in coco_data.get('annotations', []):
@@ -63,12 +61,13 @@ def get_drawing_dicts(json_path, dataset_dir):
         
     dataset_dicts = []
     
+    from PIL import Image, ImageOps
+
     for img in coco_data['images']:
         record = {}
-        rf_name = img['file_name']  # Định dạng bị đổi từ Roboflow (Ví dụ: "10_png.rf.vXk2...")
+        rf_name = img['file_name'] 
         real_full_path = None
         
-        # Heuristic 1: Tìm xem có field extra.name không
         if 'extra' in img and 'name' in img['extra']:
             orig = img['extra']['name']
             for rf in sorted_real_files:
@@ -76,15 +75,12 @@ def get_drawing_dicts(json_path, dataset_dir):
                     real_full_path = str(rf)
                     break
         
-        # Heuristic 2: Match prefix chuỗi gốc từ file rác của RF
         if not real_full_path:
             for rf in sorted_real_files:
-                # Nếu rf_name bắt đầu bằng stem + "_" (Ví dụ: 10_png thì prefix của nó là "10_")
                 if rf_name.startswith(rf.stem + '_'):
                     real_full_path = str(rf)
                     break
                     
-        # Heuristic 3: Khớp y hệt
         if not real_full_path:
             for rf in sorted_real_files:
                 if rf.name == rf_name:
@@ -92,23 +88,39 @@ def get_drawing_dicts(json_path, dataset_dir):
                     break
                     
         if not real_full_path:
-            # Nếu thất bại cả 3, đành bỏ qua ảnh này
             print(f"[!] Cảnh báo: Không thể map {rf_name} qua một file thực ở folder Dataset.")
             continue
             
+        # Tính toán tỉ lệ Scale để dán ngược BBox từ file đã resize trên Roboflow về lại ảnh gốc
+        try:
+            with Image.open(real_full_path) as pil_img:
+                pil_img = ImageOps.exif_transpose(pil_img)
+                actual_w, actual_h = pil_img.size
+        except Exception as e:
+            print(f"Lỗi đọc ảnh {real_full_path}: {e}")
+            continue
+
+        annot_w = float(img['width'])
+        annot_h = float(img['height'])
+        
+        scale_w = actual_w / annot_w
+        scale_h = actual_h / annot_h
+
         record['file_name'] = real_full_path
         record['image_id'] = img['id']
-        record['height'] = int(img['height'])
-        record['width'] = int(img['width'])
+        record['height'] = actual_h
+        record['width'] = actual_w
         
         objs = []
         for ann in annos_by_img[img['id']]:
-            # Đảm bảo cast từ giá trị string về float như mô tả của bạn (Đôi khi RF xuất ra nhầm kiểu)
             x, y, w, h = [float(v) for v in ann['bbox']]
             
-            # Category Detectron2 hoạt động trên index ảo bắt đầu = 0 thay vì 1.
-            # COCO JSON gốc của bạn là: id=1 Note, id=2 PartDrawing, id=3 Table
-            # Map index Detectron2 sẽ thành: 0=Note, 1=PartDrawing, 2=Table
+            # Scale BBox trả về kích thước gốc
+            x *= scale_w
+            y *= scale_h
+            w *= scale_w
+            h *= scale_h
+            
             cat_id = int(ann['category_id']) - 1 
             
             objs.append({

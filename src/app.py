@@ -84,7 +84,9 @@ def init_models():
         
     # 2. PaddleOCR Engine Load
     try:
-        OCR_ENGINE = PaddleOCR(use_textline_orientation=True, lang='en')
+        # Tắt OneDNN (Hệ thống tối ưu CPU của Intel) vì Docker Hugging Face CPU bị xung đột C++
+        os.environ["FLAGS_use_mkldnn"] = "0"
+        OCR_ENGINE = PaddleOCR(use_textline_orientation=True, lang='en', enable_mkldnn=False)
         print("[✓] Máy Chủ Cào Chữ (PaddleOCR) đã Sẵn sàng.")
     except Exception as e:
         print(f"[!] Lỗi khởi chạy Máy Chủ OCR: {e}")
@@ -207,9 +209,18 @@ def analyze_image(img_path):
             
             if crop_img.size > 0:
                 prep_img = preprocess_for_ocr(crop_img, class_name)
-                ocr_res = OCR_ENGINE.ocr(prep_img)
                 
-                text_str = process_note_paddle(ocr_res) if class_name == "Note" else cluster_table_paddle(ocr_res)
+                try:
+                    ocr_res = OCR_ENGINE.ocr(prep_img)
+                    text_str = process_note_paddle(ocr_res) if class_name == "Note" else cluster_table_paddle(ocr_res)
+                except Exception as e:
+                    print(f"PaddleOCR bị sập: {e}. Đang vớt bằng Pytesseract...")
+                    try:
+                        import pytesseract
+                        text_str = pytesseract.image_to_string(prep_img).strip()
+                    except Exception as fallback_e:
+                        text_str = f"(Lỗi trích xuất chữ: {str(e)[:50]})"
+                
                 obj_dict["ocr_content"] = text_str
                 
                 # Append to Formatted Text Block

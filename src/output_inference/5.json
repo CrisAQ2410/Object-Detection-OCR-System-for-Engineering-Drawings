@@ -1,0 +1,83 @@
+{
+    "image": "5.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 432,
+                "y1": 52,
+                "x2": 744,
+                "y2": 264
+            },
+            "crop_path": "output/PartDrawing/5_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "Table",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 607,
+                "y1": 270,
+                "x2": 848,
+                "y2": 470
+            },
+            "crop_path": "output/Table/5_2.png",
+            "ocr_content": "| Q | : | : | ANG |\n|---|---|---|---|"
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 9,
+                "y1": 18,
+                "x2": 463,
+                "y2": 264
+            },
+            "crop_path": "output/PartDrawing/5_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 28,
+                "y1": 250,
+                "x2": 403,
+                "y2": 472
+            },
+            "crop_path": "output/PartDrawing/5_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "Table",
+            "confidence": 0.986,
+            "bbox": {
+                "x1": 375,
+                "y1": 431,
+                "x2": 609,
+                "y2": 475
+            },
+            "crop_path": "output/Table/5_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "Note",
+            "confidence": 0.973,
+            "bbox": {
+                "x1": 393,
+                "y1": 268,
+                "x2": 594,
+                "y2": 436
+            },
+            "crop_path": "output/Note/5_6.png",
+            "ocr_content": "Trayat mie’ : Tha dom 96m che oh SB Pnby chink tb\n9d 30 4, Nop DEAN ring 2 v8 Alp I, ching du90 ohtp:\nWl vo riey bly he AST OA a 128 boy we TT\n\nTrang hip birds tdesg 2 66 Aut yc 15 vd 17, Wen 68.\nUn CAM Pat BAD pling 3: Bin ring chd Ging & yin ve\nBan rang bi Song & Ge: Obp bSAN rng Noy ears Ne\nGurha deg obs ban shag bbs ngob (v6 bling nit hat\nASE Oa mann Uo dDehd hen 8)\n\nChe Banh ring 2 quay ehanh tieo chiéy mii ton od\n190 fa me Pee BY 8 Pns gay bom Of bho cSt hing Chey\na0 636 kb ling ; Min 00, cn Khrg cresybn Pao obs bb\n#399 Noy 938 10 pita bus. 0) DE, cht Ming Ouge hit\n8 Ghy ite ic Qos bom vel Sp Ns ian\n\nChe bps M60 5 vd 14 Ub cbc 6 ta 8 Shy hal bye -\nC35 OW bt 6,7 ding 66 chan tha indy cho chit ing\n19640 rgoe"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "image": "19.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 61,
+                "y1": 296,
+                "x2": 411,
+                "y2": 638
+            },
+            "crop_path": "output/PartDrawing/19_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 475,
+                "y1": 338,
+                "x2": 1052,
+                "y2": 558
+            },
+            "crop_path": "output/PartDrawing/19_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "Note",
+            "confidence": 0.993,
+            "bbox": {
+                "x1": 406,
+                "y1": 687,
+                "x2": 1150,
+                "y2": 848
+            },
+            "crop_path": "output/Note/19_3.png",
+            "ocr_content": "temref [Quantity [TitleName. designation, material, dimension etc Article No./Reference\n\nDrawn by Checked by Date Scale\nCevin Damen 14-4-2025 41\n\n: 33 5 | www.damencnc.com\n1 OF\n\n \n\nApproved by - date File name"
+        },
+        {
+            "id": 4,
+            "class": "Note",
+            "confidence": 0.989,
+            "bbox": {
+                "x1": 50,
+                "y1": 562,
+                "x2": 356,
+                "y2": 638
+            },
+            "crop_path": "output/Note/19_4.png",
+            "ocr_content": "Seals: ZZ ‘\nStee! non-dragging seal, no extra friction\nSeals on both sides (ZZ)"
+        }
+    ]
+}

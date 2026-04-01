@@ -40,6 +40,15 @@ THING_COLORS = [(255, 255, 0), (0, 255, 255), (255, 0, 0)]
 def init_models():
     global PREDICTOR, OCR_ENGINE
     
+    import gdown
+    if not os.path.exists("output/model/model_final.pth"):
+        os.makedirs("output/model", exist_ok=True)
+        print("Downloading model from Google Drive...")
+        gdown.download(
+            "https://drive.google.com/uc?id=YOUR_FILE_ID",
+            "output/model/model_final.pth", quiet=False
+        )
+
     # 1. Detectron2 Engine Load (Fast R-CNN)
     weights_path = "./output/model/model_final.pth"
     if not os.path.exists(weights_path):
@@ -59,10 +68,8 @@ def init_models():
         cfg.MODEL.ROI_HEADS.NUM_CLASSES = 3
         cfg.MODEL.WEIGHTS = weights_path
         cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
-        
-        if not torch.cuda.is_available():
-            cfg.MODEL.DEVICE = 'cpu'
-            
+        cfg.MODEL.DEVICE = "cpu"
+                
         PREDICTOR = DefaultPredictor(cfg)
         
         MetadataCatalog.get("gradio_inference").set(
@@ -229,6 +236,7 @@ def analyze_image(img_path):
 with gr.Blocks(theme=gr.themes.Base()) as demo:
     gr.Markdown("# Engineering Drawing Analyzer")
     gr.Markdown("Trích xuất thông minh các Box: Note (Vàng) - Table (Đỏ) - PartDrawing (Xanh xám), tự động Cào text lập Bảng Markdown!")
+    gr.Markdown("⚠️ **Running on CPU, may be slow ~30s per image**")
     
     with gr.Row():
         with gr.Column(scale=1):

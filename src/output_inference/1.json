@@ -1,0 +1,96 @@
+{
+    "image": "1.png",
+    "objects": [
+        {
+            "id": 1,
+            "class": "Table",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 448,
+                "y1": 24,
+                "x2": 1002,
+                "y2": 468
+            },
+            "crop_path": "output/Table/1_1.png",
+            "ocr_content": "| ITEM | | | OTy. | DESCRIPTION | GRADE | PART.ORAWING | NUMBER: | TOTAL | MASS | (kg) |  |  |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| 11368377-42020-232-250-900\"-0001 | 142734 |  |  |  |  |  |  |  |  |  |  |\n| 1136837 | 7-42020-732-260-2008.0001 | 4382.3 |  |  |  |  |  |  |  |  |  |\n| H368377-42020-232-280-2010-0001 | 4588.4 |  |  |  |  |  |  |  |  |  |  |\n| H36937 | 7-42020-242.280-2200-0001 | 626.8 |  |  |  |  |  |  |  |  |  |\n| BINDING | INFO | PLATE | 368377-42020-232-260-232* | -0001 | 33 |  |  |  |  |  |  |\n| H368377-42020-232-260-2332-1001 | 323.3 |  |  |  |  |  |  |  |  |  |  |\n| H368377-42020-232-260-240-0001 | 361.7 |  |  |  |  |  |  |  |  |  |  |\n| H36937 | 7-42020-232-260-2348-0001 | 926.0 |  |  |  |  |  |  |  |  |  |\n| TIE | ROD | BEAM | GUIDE | 1H368377-42020-232-260-235* | 1001 | $3 |  |  |  |  |  |\n| H369377-42970-732-260- | 7606-0001 | 163.4 |  |  |  |  |  |  |  |  |  |\n| a | LOCKING | PN | 1H1368377-42020-232-260-2507-0001 | ww |  |  |  |  |  |  |  |\n| H368377-42020-232-26D- | 2608-1100 | 1 | 34 |  |  |  |  |  |  |  |  |\n| 1136837 | 7-42920-232-260-2505-0001 | 1822.1 |  |  |  |  |  |  |  |  |  |\n| H369377-42070-732-260-7510-0001 | 704.3 |  |  |  |  |  |  |  |  |  |  |\n| BINDING | INFO | PLATE | 1H1368377-42920-232-280-2513-0001 | 33 |  |  |  |  |  |  |  |\n| ROOF | JACKING | BEAM | H369377-42020-232-260- | 26000001 | 534.5 |  |  |  |  |  |  |\n| METRIC | HEAVY | HEX | STRUCTURAL | BOLT | TYPE | 1 | H368377-42920-232-250-2200-P001 | 30 |  |  |  |\n| ASTM | AIZ5M | M20X110 |  |  |  |  |  |  |  |  |  |\n| v7 | SPLIT | PIN | ISO | 124 | -8 | X50 | Ss | H368377-42020-232-250-2500-P0OA | 02 |  |  |\n| 18 | METRIC | HEAVY | HEX | STRUCTURAL | BOLT | TYPE | 1 | H368377-42020-232-250-2600-PDOG: | 12 |  |  |\n| ASTM | A3Z5¢ | MZ0X8D |  |  |  |  |  |  |  |  |  |\n| [ | 19 | | | 2 | [ser | scrcwiso | a0ze | - | masxeo | [4s | rin6877.42020-239-250-2500-PO08 | 02 |\n| HARDENED | WASHER | ASTM | F436 | M120, | 200H¥ | WH368377-42020-232-250-2200-P004, | QTY.16. | 09 |  |  |  |\n| 1H368377-42020-232-250-2600-P010, | QTY.B |  |  |  |  |  |  |  |  |  |  |\n| METRIC | HEAVY | HEX | NUT | ASTI | ASG3M | AI20 | CLASS | aS | H368377-42020-232-250-2200-P00G, | OTY.B |  |\n| 1H368377-42020-232-250-2600-P | 008, | QTY.4 |  |  |  |  |  |  |  |  |  |\n| T127X146X22X | °670 | LONG | H268377-42020-232.250-900°-P001 | 144.2 |  |  |  |  |  |  |  |\n| T12Z7X | 148X2Z2K | 2275 | LONG | H368377-42020-232-250-900*-P0O2 | 98.2 |  |  |  |  |  |  |\n| T12/X146X72X | 2500 | LONG | H36937 | 7-42920-242.250-900*-PLOS | oO |  |  |  |  |  |  |"
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 792,
+                "y1": 599,
+                "x2": 1014,
+                "y2": 832
+            },
+            "crop_path": "output/PartDrawing/1_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "Note",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 223,
+                "y1": 34,
+                "x2": 417,
+                "y2": 82
+            },
+            "crop_path": "output/Note/1_3.png",
+            "ocr_content": "== SPREADER BEAM PART\n\nNo H368377. 42020-232-260-9000-0001\n\nAND SLINGS TO BE USED FOR LIFTING AND:\n\\ INSTALLATION OF SIDEWALL BINDING FRAME"
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.994,
+            "bbox": {
+                "x1": 421,
+                "y1": 638,
+                "x2": 740,
+                "y2": 832
+            },
+            "crop_path": "output/PartDrawing/1_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "Note",
+            "confidence": 0.994,
+            "bbox": {
+                "x1": 580,
+                "y1": 478,
+                "x2": 1007,
+                "y2": 579
+            },
+            "crop_path": "output/Note/1_5.png",
+            "ocr_content": "a\n\n1\n2\n3\na\n5.\n6.\n\nTHIS DRAWING SHALL BE READ VATH SPECIFICATION H368377-P3401-011000\n\nUNLESS NOTED OTHERWISE, DIMENS ONS ARE WN MILUMETERS.\n\nMASSES ARE ESTIMATED.\n\nSECURE TIE ROD BEAM, HOLD DOWN ARIS. WALER BEAM AND JACKING BEAM TO BUCKSTAY\n\nFRAME PRIOR TO HANDLING OR LIFTING ASSEMBLY, SUBJECT TO HATCH APPROVAL\n\nTEMPORARY BRACING ITEMS 22, 23 ANO 24 SHALL BE PAINTED YELLOW ANO SHALL BE\n\nREMOVED PRIOR TO FURNACE COMMISSIONING.\n\nTOUCH UP PAINT ON BUCKSTAY FRAME AT ALL LOCATIONS WHERE TEMPORARY BRACING IS REMOVED."
+        },
+        {
+            "id": 6,
+            "class": "PartDrawing",
+            "confidence": 0.993,
+            "bbox": {
+                "x1": 12,
+                "y1": 81,
+                "x2": 425,
+                "y2": 825
+            },
+            "crop_path": "output/PartDrawing/1_6.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 7,
+            "class": "Table",
+            "confidence": 0.924,
+            "bbox": {
+                "x1": 722,
+                "y1": 42,
+                "x2": 1010,
+                "y2": 465
+            },
+            "crop_path": "output/Table/1_7.png",
+            "ocr_content": "| 1H368377-42020-232-250-900\"* | -0001 |  |  |\n|---|---|---|---|\n| H368377-42020-232-260-232* | -0001 |  |  |\n| H369377-42020-232-260-2332-1001 |  |  |  |\n| 1H1368377-42920-232-280-2513-0001 |  |  |  |\n| H369377-42020-232-260- | 2600-0001 |  |  |\n| YPE | 1 | H368377-42020-232-250-2200-P001 |  |\n| 1H368377-42020-232-250-2500-P0OA |  |  |  |\n| YPE | 1 | H368377-42920-232-250-2600-PDOG: |  |\n| 45H | H368377-42020-232-250-2300-P | 008 |  |\n| HY | H368377-42020-232-250-2200-P | 004, | QTY.16. |\n| 1H1368377-42020-232-250-2600-P010, | QTY.B |  |  |\n| ASS | AS | H368377-42020-232-25D-2200-P00G, | OTY.B |\n| 1H368377-42020-232-250-2600-P | 008, | QTY.4 |  |\n| 356IR | H268377-42020-232.250-900°-P001 |  |  |\n| 35SJR_ | H368377-42020-232-250-900* | -P002 |  |\n| SIR | H3G837 | ?-42920-232.250-800\"-POOS |  |"
+        }
+    ]
+}

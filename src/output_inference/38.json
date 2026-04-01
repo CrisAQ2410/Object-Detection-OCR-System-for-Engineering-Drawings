@@ -1,0 +1,83 @@
+{
+    "image": "38.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 209,
+                "y1": 715,
+                "x2": 641,
+                "y2": 1020
+            },
+            "crop_path": "output/PartDrawing/38_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "Note",
+            "confidence": 0.994,
+            "bbox": {
+                "x1": 44,
+                "y1": 638,
+                "x2": 317,
+                "y2": 761
+            },
+            "crop_path": "output/Note/38_2.png",
+            "ocr_content": "The plane of the keyway\nis Aligned to the bottom\nof the Teeth\n\nWithin +/-0,1 degrees"
+        },
+        {
+            "id": 3,
+            "class": "Note",
+            "confidence": 0.965,
+            "bbox": {
+                "x1": 701,
+                "y1": 650,
+                "x2": 1143,
+                "y2": 805
+            },
+            "crop_path": "output/Note/38_3.png",
+            "ocr_content": "Module: 2\n\nNumber of Teeth: 15\n\nMaterial: C45\n\nType of finish: Hardened and Grour\nQuality: Q6"
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.963,
+            "bbox": {
+                "x1": 221,
+                "y1": 146,
+                "x2": 1145,
+                "y2": 322
+            },
+            "crop_path": "output/PartDrawing/38_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.754,
+            "bbox": {
+                "x1": 83,
+                "y1": 114,
+                "x2": 1161,
+                "y2": 474
+            },
+            "crop_path": "output/PartDrawing/38_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "PartDrawing",
+            "confidence": 0.666,
+            "bbox": {
+                "x1": 50,
+                "y1": 117,
+                "x2": 232,
+                "y2": 516
+            },
+            "crop_path": "output/PartDrawing/38_6.png",
+            "ocr_content": ""
+        }
+    ]
+}

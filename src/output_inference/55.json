@@ -1,0 +1,122 @@
+{
+    "image": "55.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 597,
+                "y1": 128,
+                "x2": 1135,
+                "y2": 375
+            },
+            "crop_path": "output/PartDrawing/55_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 28,
+                "y1": 570,
+                "x2": 309,
+                "y2": 826
+            },
+            "crop_path": "output/PartDrawing/55_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 71,
+                "y1": 413,
+                "x2": 589,
+                "y2": 562
+            },
+            "crop_path": "output/PartDrawing/55_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 111,
+                "y1": 143,
+                "x2": 576,
+                "y2": 355
+            },
+            "crop_path": "output/PartDrawing/55_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "Note",
+            "confidence": 0.995,
+            "bbox": {
+                "x1": 671,
+                "y1": 415,
+                "x2": 895,
+                "y2": 472
+            },
+            "crop_path": "output/Note/55_5.png",
+            "ocr_content": ">\nIncluding ail the O-rings to make\n— the gearbox\ndustproof"
+        },
+        {
+            "id": 6,
+            "class": "Note",
+            "confidence": 0.989,
+            "bbox": {
+                "x1": 554,
+                "y1": 589,
+                "x2": 853,
+                "y2": 664
+            },
+            "crop_path": "output/Note/55_6.png",
+            "ocr_content": "including the correct bolts to mount to\n— DamenCNC part numbers 4228.4229 and 4230\nDCNC Router Z-axis Ballscrew R=XXXX"
+        },
+        {
+            "id": 7,
+            "class": "Note",
+            "confidence": 0.989,
+            "bbox": {
+                "x1": 233,
+                "y1": 558,
+                "x2": 464,
+                "y2": 618
+            },
+            "crop_path": "output/Note/55_7.png",
+            "ocr_content": "oe os\nIncluding M5x20 bolts to attach\n\na NEMA 34 steppermotor"
+        },
+        {
+            "id": 8,
+            "class": "Note",
+            "confidence": 0.985,
+            "bbox": {
+                "x1": 19,
+                "y1": 31,
+                "x2": 355,
+                "y2": 102
+            },
+            "crop_path": "output/Note/55_8.png",
+            "ocr_content": "Including AT-5 25mm Wide belt, and the pulleys\nprepared for mounting a NEMA 34 steppermotor —\nwith a 14mm diameter shaft"
+        },
+        {
+            "id": 9,
+            "class": "Note",
+            "confidence": 0.98,
+            "bbox": {
+                "x1": 398,
+                "y1": 683,
+                "x2": 1152,
+                "y2": 848
+            },
+            "crop_path": "output/Note/55_9.png",
+            "ocr_content": "Itemref | Quantity Title/(Name, designation. material, dimension etc Article No./Reference\n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\nDrawn by Checked by Approved by - date File name Date Scale\nKevin Damen 10-1-2024 1:2\nwww.damencnc.com\n\n \n\n \n\n6 4 / O 6470 Timing Belt Gearbox i 1:1 OlY-set Edition |Sheet\nfor OCNC Router Z-axis Ballscrew 1 OF 7"
+        }
+    ]
+}

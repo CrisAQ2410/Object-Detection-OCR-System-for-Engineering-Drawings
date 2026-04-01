@@ -1,0 +1,83 @@
+{
+    "image": "29.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 803,
+                "y1": 216,
+                "x2": 1162,
+                "y2": 515
+            },
+            "crop_path": "output/PartDrawing/29_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 832,
+                "y1": 589,
+                "x2": 1086,
+                "y2": 883
+            },
+            "crop_path": "output/PartDrawing/29_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 21,
+                "y1": 198,
+                "x2": 480,
+                "y2": 534
+            },
+            "crop_path": "output/PartDrawing/29_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 92,
+                "y1": 604,
+                "x2": 386,
+                "y2": 892
+            },
+            "crop_path": "output/PartDrawing/29_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 519,
+                "y1": 224,
+                "x2": 726,
+                "y2": 508
+            },
+            "crop_path": "output/PartDrawing/29_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "PartDrawing",
+            "confidence": 0.992,
+            "bbox": {
+                "x1": 569,
+                "y1": 534,
+                "x2": 723,
+                "y2": 936
+            },
+            "crop_path": "output/PartDrawing/29_6.png",
+            "ocr_content": ""
+        }
+    ]
+}

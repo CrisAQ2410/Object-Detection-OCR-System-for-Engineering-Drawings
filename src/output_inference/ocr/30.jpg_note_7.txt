@@ -1,0 +1,2 @@
+Example of a hollow shaft reducer with an extra inline planetary gearbox.
+*Not included by default **Monitor max output torque when using an extra gearbox

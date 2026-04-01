@@ -1,0 +1,8 @@
+Module: 2
+
+Number of Teeth: 15
+
+Material: C45
+
+Type of finish: Hardened and Grour
+Quality: Q6

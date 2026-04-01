@@ -1,0 +1,135 @@
+{
+    "image": "52.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 1.0,
+            "bbox": {
+                "x1": 410,
+                "y1": 270,
+                "x2": 557,
+                "y2": 665
+            },
+            "crop_path": "output/PartDrawing/52_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 167,
+                "y1": 303,
+                "x2": 393,
+                "y2": 502
+            },
+            "crop_path": "output/PartDrawing/52_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 356,
+                "y1": 69,
+                "x2": 594,
+                "y2": 228
+            },
+            "crop_path": "output/PartDrawing/52_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 85,
+                "y1": 76,
+                "x2": 269,
+                "y2": 256
+            },
+            "crop_path": "output/PartDrawing/52_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 626,
+                "y1": 311,
+                "x2": 812,
+                "y2": 528
+            },
+            "crop_path": "output/PartDrawing/52_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "Table",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 22,
+                "y1": 589,
+                "x2": 393,
+                "y2": 843
+            },
+            "crop_path": "output/Table/52_6.png",
+            "ocr_content": "| Rated | Torque | 2Nm |  |  |  |  |\n|---|---|---|---|---|---|---|\n| Max | Torque | 4Nm |  |  |  |  |\n| Moment | of | Inertia | 3.1 | x | 10-6 | kg.m2 |\n| Max | Eccentricity | error | 0.02 | mm |  |  |\n| Max | Angle | error | | | 1 |  |  |\n| Axial | Shaft | Play | Error | +/-0.15mm |  |  |\n| Units | mm |  |  |  |  |  |\n| Tolerances | +/-0.imm | unless | otherwise | specified |  |  |"
+        },
+        {
+            "id": 7,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 858,
+                "y1": 308,
+                "x2": 1078,
+                "y2": 470
+            },
+            "crop_path": "output/PartDrawing/52_7.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 8,
+            "class": "Note",
+            "confidence": 0.993,
+            "bbox": {
+                "x1": 693,
+                "y1": 181,
+                "x2": 1153,
+                "y2": 256
+            },
+            "crop_path": "output/Note/52_8.png",
+            "ocr_content": "WARNING: Do not remove these bolts\nThese shaft couplers require a special alignment tool & procedure\n\n_ It is best to order the shaft coupler with the correct bore on both sides\n\npO"
+        },
+        {
+            "id": 9,
+            "class": "Note",
+            "confidence": 0.982,
+            "bbox": {
+                "x1": 407,
+                "y1": 686,
+                "x2": 1149,
+                "y2": 849
+            },
+            "crop_path": "output/Note/52_9.png",
+            "ocr_content": "temref Quantity | Title/Name. designation. material. dimension etc [Article No./Reference\n\n \n\nDate Seale\n8-6-2024 4:1\n\nDrawn by Checked by File name\n\n<evin Damen\n\nApproved by - date\n\n \n\n \n\n \n\n \n\nwww.damencnc.com\n6 8 { 3 6870 ShaftCoupler Edition Sheet\nDCNC-D27-L25-B8.00-B8.00mm\n\n1 OF |"
+        },
+        {
+            "id": 10,
+            "class": "Note",
+            "confidence": 0.782,
+            "bbox": {
+                "x1": 264,
+                "y1": 200,
+                "x2": 390,
+                "y2": 221
+            },
+            "crop_path": "output/Note/52_10.png",
+            "ocr_content": "Max torque 1.9Nm -"
+        }
+    ]
+}

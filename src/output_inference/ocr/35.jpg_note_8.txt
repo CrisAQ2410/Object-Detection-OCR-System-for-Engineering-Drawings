@@ -1,0 +1,5 @@
+Removable Flange
+—With flange -> NEMA 34
+\ Mithout flange -> 60x60 Servo —
+
+Y

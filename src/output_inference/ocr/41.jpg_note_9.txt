@@ -1,0 +1,6 @@
+Units
+Tolerances 4 0.1mm unless otherwise specified
+Material Alu 6082
+Tumbling | Yes
+
+Surface finish None

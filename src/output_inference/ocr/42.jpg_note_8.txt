@@ -1,0 +1,13 @@
+Jnits | mm |
+
+ 
+
+ 
+
+folerances £ 0.1mm unless othenvise specified
+Aaterial Alu 6082
+rumbling | Yes |
+
+ 
+
+surface finish None

@@ -1,0 +1,57 @@
+{
+    "image": "56.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 184,
+                "y1": 339,
+                "x2": 809,
+                "y2": 502
+            },
+            "crop_path": "output/PartDrawing/56_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 258,
+                "y1": 531,
+                "x2": 725,
+                "y2": 628
+            },
+            "crop_path": "output/PartDrawing/56_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "Note",
+            "confidence": 0.978,
+            "bbox": {
+                "x1": 371,
+                "y1": 663,
+                "x2": 917,
+                "y2": 792
+            },
+            "crop_path": "output/Note/56_3.png",
+            "ocr_content": "Quantity | Title/Name, designation, material, dimension etc\n\nDate\n2011-10-24"
+        },
+        {
+            "id": 4,
+            "class": "Note",
+            "confidence": 0.973,
+            "bbox": {
+                "x1": 55,
+                "y1": 214,
+                "x2": 838,
+                "y2": 237
+            },
+            "crop_path": "output/Note/56_4.png",
+            "ocr_content": "V40_ Shaft D=19mm Ltotaal=147mm +Keyway D=10mm L=65mI!"
+        }
+    ]
+}

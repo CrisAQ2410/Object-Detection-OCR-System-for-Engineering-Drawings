@@ -1,0 +1,3 @@
+Max allowable torque of 6Nm
+Advised Torque wrench 5.7 Nm (3
+& Socket attachment (5143)

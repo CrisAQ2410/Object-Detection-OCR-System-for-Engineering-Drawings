@@ -1,0 +1,57 @@
+{
+    "image": "39.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 863,
+                "y1": 340,
+                "x2": 935,
+                "y2": 514
+            },
+            "crop_path": "output/PartDrawing/39_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.994,
+            "bbox": {
+                "x1": 504,
+                "y1": 314,
+                "x2": 693,
+                "y2": 588
+            },
+            "crop_path": "output/PartDrawing/39_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "Note",
+            "confidence": 0.986,
+            "bbox": {
+                "x1": 399,
+                "y1": 686,
+                "x2": 1154,
+                "y2": 850
+            },
+            "crop_path": "output/Note/39_3.png",
+            "ocr_content": "Itemref [Quantity [Title/Name. designation, material, dimension etc [Article No./Reference\n\nDrawn by \\rectes by\n\n \n\nScale\n1:1\n\nDate\n3-1-2022\n\n| www.damencnc.com\n3156 Groove Ball Bearing Edition /|Sheet\n4200-2RS 10x30x 14 (Double row) 1 OF 1\n\nApproved by - date File name\n\nKevin Damen"
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.975,
+            "bbox": {
+                "x1": 111,
+                "y1": 344,
+                "x2": 376,
+                "y2": 571
+            },
+            "crop_path": "output/PartDrawing/39_4.png",
+            "ocr_content": ""
+        }
+    ]
+}

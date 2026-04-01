@@ -40,15 +40,6 @@ THING_COLORS = [(255, 255, 0), (0, 255, 255), (255, 0, 0)]
 def init_models():
     global PREDICTOR, OCR_ENGINE
     
-    import gdown
-    if not os.path.exists("output/model/model_final.pth"):
-        os.makedirs("output/model", exist_ok=True)
-        print("Downloading model from Google Drive...")
-        gdown.download(
-            "https://drive.google.com/uc?id=YOUR_FILE_ID",
-            "output/model/model_final.pth", quiet=False
-        )
-
     # 1. Detectron2 Engine Load (Fast R-CNN)
     weights_path = "./output/model/model_final.pth"
     if not os.path.exists(weights_path):

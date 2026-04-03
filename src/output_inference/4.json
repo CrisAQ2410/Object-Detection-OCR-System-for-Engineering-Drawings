@@ -1,0 +1,291 @@
+{
+    "image": "4.jpeg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 23,
+                "y1": 309,
+                "x2": 242,
+                "y2": 493
+            },
+            "crop_path": "output/PartDrawing/4_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 522,
+                "y1": 578,
+                "x2": 596,
+                "y2": 746
+            },
+            "crop_path": "output/PartDrawing/4_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 255,
+                "y1": 309,
+                "x2": 464,
+                "y2": 490
+            },
+            "crop_path": "output/PartDrawing/4_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 482,
+                "y1": 321,
+                "x2": 659,
+                "y2": 501
+            },
+            "crop_path": "output/PartDrawing/4_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 646,
+                "y1": 31,
+                "x2": 806,
+                "y2": 305
+            },
+            "crop_path": "output/PartDrawing/4_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 672,
+                "y1": 322,
+                "x2": 812,
+                "y2": 477
+            },
+            "crop_path": "output/PartDrawing/4_6.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 7,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 347,
+                "y1": 583,
+                "x2": 512,
+                "y2": 671
+            },
+            "crop_path": "output/PartDrawing/4_7.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 8,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 156,
+                "y1": 494,
+                "x2": 282,
+                "y2": 601
+            },
+            "crop_path": "output/PartDrawing/4_8.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 9,
+            "class": "PartDrawing",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 281,
+                "y1": 496,
+                "x2": 433,
+                "y2": 587
+            },
+            "crop_path": "output/PartDrawing/4_9.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 10,
+            "class": "PartDrawing",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 23,
+                "y1": 601,
+                "x2": 188,
+                "y2": 740
+            },
+            "crop_path": "output/PartDrawing/4_10.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 11,
+            "class": "PartDrawing",
+            "confidence": 0.995,
+            "bbox": {
+                "x1": 7,
+                "y1": 26,
+                "x2": 539,
+                "y2": 300
+            },
+            "crop_path": "output/PartDrawing/4_11.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 12,
+            "class": "Table",
+            "confidence": 0.994,
+            "bbox": {
+                "x1": 816,
+                "y1": 22,
+                "x2": 1058,
+                "y2": 519
+            },
+            "crop_path": "output/Table/4_12.png",
+            "ocr_content": "| VERTICAL | LEAD | SCREW | 1 |  |\n|---|---|---|---|---|\n| VERTICAL | LEAD | SCREW | 1 |  |\n| ADJUSTABLE | WEDGE | ' |  |  |\n| WEDGE | GRU | BCREW | 5 |  |\n| PIVOT | TAPER | PIN |  |  |\n| 1 |  |  |  |  |\n| 3 | SWIVEL | PLATE | SCREW | 1 |\n| VERTICAL | LEAD | SCREW | 1 |  |\n| ROO | WASHER |  |  |  |\n| HANDLE | 1 |  |  |  |\n| NUT | - | mtd | ‘ |  |"
+        },
+        {
+            "id": 13,
+            "class": "PartDrawing",
+            "confidence": 0.992,
+            "bbox": {
+                "x1": 680,
+                "y1": 572,
+                "x2": 735,
+                "y2": 750
+            },
+            "crop_path": "output/PartDrawing/4_13.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 14,
+            "class": "PartDrawing",
+            "confidence": 0.992,
+            "bbox": {
+                "x1": 34,
+                "y1": 496,
+                "x2": 155,
+                "y2": 595
+            },
+            "crop_path": "output/PartDrawing/4_14.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 15,
+            "class": "PartDrawing",
+            "confidence": 0.991,
+            "bbox": {
+                "x1": 466,
+                "y1": 503,
+                "x2": 600,
+                "y2": 584
+            },
+            "crop_path": "output/PartDrawing/4_15.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 16,
+            "class": "PartDrawing",
+            "confidence": 0.989,
+            "bbox": {
+                "x1": 682,
+                "y1": 472,
+                "x2": 788,
+                "y2": 576
+            },
+            "crop_path": "output/PartDrawing/4_16.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 17,
+            "class": "PartDrawing",
+            "confidence": 0.983,
+            "bbox": {
+                "x1": 784,
+                "y1": 502,
+                "x2": 1052,
+                "y2": 572
+            },
+            "crop_path": "output/PartDrawing/4_17.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 18,
+            "class": "PartDrawing",
+            "confidence": 0.979,
+            "bbox": {
+                "x1": 201,
+                "y1": 671,
+                "x2": 511,
+                "y2": 745
+            },
+            "crop_path": "output/PartDrawing/4_18.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 19,
+            "class": "PartDrawing",
+            "confidence": 0.97,
+            "bbox": {
+                "x1": 605,
+                "y1": 509,
+                "x2": 676,
+                "y2": 743
+            },
+            "crop_path": "output/PartDrawing/4_19.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 20,
+            "class": "PartDrawing",
+            "confidence": 0.914,
+            "bbox": {
+                "x1": 540,
+                "y1": 33,
+                "x2": 634,
+                "y2": 304
+            },
+            "crop_path": "output/PartDrawing/4_20.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 21,
+            "class": "Table",
+            "confidence": 0.72,
+            "bbox": {
+                "x1": 725,
+                "y1": 588,
+                "x2": 1061,
+                "y2": 741
+            },
+            "crop_path": "output/Table/4_21.png",
+            "ocr_content": "| oe |  |  |  |  |\n|---|---|---|---|---|\n| DESCRIPTION | [ORN | [GK | [APP] | DATE| |\n| CHECKED | BY | : |  |  |\n| PROJECT: |  |  |  |  |"
+        },
+        {
+            "id": 22,
+            "class": "PartDrawing",
+            "confidence": 0.612,
+            "bbox": {
+                "x1": 199,
+                "y1": 597,
+                "x2": 332,
+                "y2": 671
+            },
+            "crop_path": "output/PartDrawing/4_22.png",
+            "ocr_content": ""
+        }
+    ]
+}

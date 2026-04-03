@@ -1,0 +1,96 @@
+{
+    "image": "43.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 1.0,
+            "bbox": {
+                "x1": 10,
+                "y1": 71,
+                "x2": 449,
+                "y2": 821
+            },
+            "crop_path": "output/PartDrawing/43_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 511,
+                "y1": 175,
+                "x2": 700,
+                "y2": 456
+            },
+            "crop_path": "output/PartDrawing/43_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 815,
+                "y1": 165,
+                "x2": 1044,
+                "y2": 459
+            },
+            "crop_path": "output/PartDrawing/43_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "Note",
+            "confidence": 0.992,
+            "bbox": {
+                "x1": 419,
+                "y1": 598,
+                "x2": 1121,
+                "y2": 656
+            },
+            "crop_path": "output/Note/43_4.png",
+            "ocr_content": "AARNING: Do not fully compress the 2 hubs.\nThe minimum mounted length should be 65mm to retain flexibil"
+        },
+        {
+            "id": 5,
+            "class": "Note",
+            "confidence": 0.991,
+            "bbox": {
+                "x1": 407,
+                "y1": 686,
+                "x2": 1176,
+                "y2": 845
+            },
+            "crop_path": "output/Note/43_5.png",
+            "ocr_content": "temref Quantity | Title/‘Name, designation. material. dimension etc [Articte No./Reference |\n\n \n\n \n\n \n\n \n\n \n\nyrawn by Checked by Approved by - date File name Date Scale\nras Jansen Kevin Damen 31-7-2020 31-07-2020 4:1\n| www.damencnc.com\n\n \n\nEdition |Sheet\n\n1 OF 1"
+        },
+        {
+            "id": 6,
+            "class": "Note",
+            "confidence": 0.938,
+            "bbox": {
+                "x1": 158,
+                "y1": 174,
+                "x2": 364,
+                "y2": 221
+            },
+            "crop_path": "output/Note/43_6.png",
+            "ocr_content": "Max allowable torque of 6Nm\nAdvised Torque wrench 5.7 Nm (3\n& Socket attachment (5143)"
+        },
+        {
+            "id": 7,
+            "class": "Note",
+            "confidence": 0.935,
+            "bbox": {
+                "x1": 122,
+                "y1": 86,
+                "x2": 1068,
+                "y2": 114
+            },
+            "crop_path": "output/Note/43_7.png",
+            "ocr_content": "untina instruction for DamenCNC 40mm diameter ShaftCoup"
+        }
+    ]
+}

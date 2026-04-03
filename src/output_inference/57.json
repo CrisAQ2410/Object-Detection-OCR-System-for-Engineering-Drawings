@@ -1,0 +1,70 @@
+{
+    "image": "57.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 17,
+                "y1": 158,
+                "x2": 286,
+                "y2": 414
+            },
+            "crop_path": "output/PartDrawing/57_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 334,
+                "y1": 186,
+                "x2": 502,
+                "y2": 362
+            },
+            "crop_path": "output/PartDrawing/57_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 345,
+                "y1": 422,
+                "x2": 484,
+                "y2": 565
+            },
+            "crop_path": "output/PartDrawing/57_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 602,
+                "y1": 186,
+                "x2": 777,
+                "y2": 333
+            },
+            "crop_path": "output/PartDrawing/57_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 332,
+                "y1": 631,
+                "x2": 481,
+                "y2": 763
+            },
+            "crop_path": "output/PartDrawing/57_5.png",
+            "ocr_content": ""
+        }
+    ]
+}

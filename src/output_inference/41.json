@@ -1,0 +1,135 @@
+{
+    "image": "41.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 45,
+                "y1": 459,
+                "x2": 328,
+                "y2": 712
+            },
+            "crop_path": "output/PartDrawing/41_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 474,
+                "y1": 434,
+                "x2": 775,
+                "y2": 618
+            },
+            "crop_path": "output/PartDrawing/41_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 156,
+                "y1": 180,
+                "x2": 420,
+                "y2": 405
+            },
+            "crop_path": "output/PartDrawing/41_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 877,
+                "y1": 134,
+                "x2": 1138,
+                "y2": 443
+            },
+            "crop_path": "output/PartDrawing/41_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.991,
+            "bbox": {
+                "x1": 521,
+                "y1": 172,
+                "x2": 734,
+                "y2": 382
+            },
+            "crop_path": "output/PartDrawing/41_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "Note",
+            "confidence": 0.991,
+            "bbox": {
+                "x1": 399,
+                "y1": 684,
+                "x2": 1156,
+                "y2": 848
+            },
+            "crop_path": "output/Note/41_6.png",
+            "ocr_content": "ltemref | Quantity [Title/Name, designation, material. dimension etc [Article No./Reference\n\n \n\n \n\n \n\n \n\n \n\n \n\nDrawn by Checked by Approved by - date File name Date Scaie\nCas Jansen Kevin Damen 31-7-2020 30-7-2020 1:1\nwww.damencnc.com\n\n5 1 Z 3 5123 Edition |Sheet\nHUB ShaftCoupler DCNC-D40-L65-B0.00mm 10F 1"
+        },
+        {
+            "id": 7,
+            "class": "Table",
+            "confidence": 0.757,
+            "bbox": {
+                "x1": 33,
+                "y1": 715,
+                "x2": 389,
+                "y2": 837
+            },
+            "crop_path": "output/Table/41_7.png",
+            "ocr_content": "| | | Units |  |  |  |  |\n|---|---|---|---|---|---|\n| Tolerances | 1 | 0.1mm | unless | othenvise | specified |\n| Material | Alu | 6082 |  |  |  |\n| | | Tumbling | | | Yes |  |  |\n| Surface | finish | None |  |  |  |"
+        },
+        {
+            "id": 8,
+            "class": "Note",
+            "confidence": 0.705,
+            "bbox": {
+                "x1": 326,
+                "y1": 603,
+                "x2": 436,
+                "y2": 647
+            },
+            "crop_path": "output/Note/41_8.png",
+            "ocr_content": "_Pocket for bolt\nMSx16 DIN 912"
+        },
+        {
+            "id": 9,
+            "class": "Note",
+            "confidence": 0.579,
+            "bbox": {
+                "x1": 43,
+                "y1": 717,
+                "x2": 388,
+                "y2": 839
+            },
+            "crop_path": "output/Note/41_9.png",
+            "ocr_content": "Units\nTolerances 4 0.1mm unless otherwise specified\nMaterial Alu 6082\nTumbling | Yes\n\nSurface finish None"
+        },
+        {
+            "id": 10,
+            "class": "Note",
+            "confidence": 0.502,
+            "bbox": {
+                "x1": 121,
+                "y1": 96,
+                "x2": 268,
+                "y2": 114
+            },
+            "crop_path": "output/Note/41_10.png",
+            "ocr_content": "M5x0.7 Threaded hole -"
+        }
+    ]
+}

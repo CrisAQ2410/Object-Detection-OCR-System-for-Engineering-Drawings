@@ -1,0 +1,57 @@
+{
+    "image": "7.webp",
+    "objects": [
+        {
+            "id": 1,
+            "class": "Table",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 1300,
+                "y1": 648,
+                "x2": 1897,
+                "y2": 1330
+            },
+            "crop_path": "output/Table/7_1.png",
+            "ocr_content": "| | | | | Pe | [| |  |  |  |  |  |  |  |  |  |  |  |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| Ps | a | Ce | ae |  |  |  |  |  |  |  |  |  |  |  |\n| 1 | Stck. | Geh | |Geha | use | G | — | ALSi10Mg |  |  |  |  |  |  |  |\n| 2 | Stck. | Hoh | |Hohlwelle | 34CrMod |  |  |  |  |  |  |  |  |  |  |\n| sik | cmectewele | Cis |  |  |  |  |  |  |  |  |  |  |  |  |\n| sick | owed | ces |  |  |  |  |  |  |  |  |  |  |  |  |\n| im | sik | logrieieigs | ——SSSC*dCSCSCSC~C~S*~iR | CS |  |  |  |  |  |  |  |  |  |  |\n| sik | sonny | iSite |  |  |  |  |  |  |  |  |  |  |  |  |\n| a | 2 | 2 | [Stck. | |Stck. | |Rillenkugeilager | |Kegelrollenlager | DIN | DIN | 625 | 720 | — | — | 6009 | 30203 |\n| | | | | 1. | [Stck. | fPussteder | gro’ | pNeses—B2x8x2 | | | | |  |  |  |  |  |  |\n| Stck.[Pussfeder | klein | aN | ga85—BSxSxm | | |  |  |  |  |  |  |  |  |  |  |\n| Stk | [verschlusssehroupe | JON | 90B—MextS—st | | |  |  |  |  |  |  |  |  |  |  |\n| 1 | Stck. | |Zytinderschraube | mit | (nnensechskant | [iso | 4762—Moxte—88 | | | | |  |  |  |  |  |  |\n| TT | DIN | 9021 | — | B | 64 |  |  |  |  |  |  |  |  |  |\n| 8 | see | Stck. | |Radial-Wellendichtring | DIN | 3760 | — | AS | 45x60 | x8 |  |  |  |  |  |\n| | | o-ring | 3771-850355-N-NBR | IN | 70 | _| | | |  |  |  |  |  |  |  |  |\n| [1 | fsck. | o-ring | CON | 3771-40xa55-N-NBR | TO | | |  |  |  |  |  |  |  |  |\n| | | fick. |  |  |  |  |  |  |  |  |  |  |  |  |  |"
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 241,
+                "y1": 816,
+                "x2": 907,
+                "y2": 1221
+            },
+            "crop_path": "output/PartDrawing/7_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 33,
+                "y1": 7,
+                "x2": 970,
+                "y2": 724
+            },
+            "crop_path": "output/PartDrawing/7_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 1094,
+                "y1": 29,
+                "x2": 1885,
+                "y2": 674
+            },
+            "crop_path": "output/PartDrawing/7_4.png",
+            "ocr_content": ""
+        }
+    ]
+}

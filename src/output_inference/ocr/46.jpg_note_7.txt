@@ -1,0 +1,2 @@
+Maximum transferable torque 353Nm (Mt)
+Maximum transferable Axial force 31kN (Faxial) —

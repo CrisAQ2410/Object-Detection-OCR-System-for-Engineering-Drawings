@@ -1,0 +1,3 @@
+Including AT-5 25mm Wide belt, and the pulleys
+prepared for mounting a NEMA 34 steppermotor —
+with a 14mm diameter shaft

@@ -1,0 +1,44 @@
+{
+    "image": "15.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "Table",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 331,
+                "y1": 63,
+                "x2": 609,
+                "y2": 378
+            },
+            "crop_path": "output/Table/15_1.png",
+            "ocr_content": "| Part | Nome | oa | « |\n|---|---|---|---|\n| ARMREST |  |  |  |\n| ARNRESTR |  |  |  |\n| [pack |  |  |  |\n| [BACKPADD | ING |  |  |\n| ILEG |  |  |  |\n| NUTARMRE | STS |  |  |\n| NUTSUPPORT |  |  |  |\n| PILLOW |  |  |  |\n| PINARMRESTS |  |  |  |\n| PINBACK |  |  |  |\n| PINLEGS |  |  |  |\n| PINSUPPORT |  |  |  |\n| RECLINER |  |  |  |\n| RECL | INFRPADD | ING |  |\n| RUBAFRSTOPPER |  |  |  |\n| [SEAT |  |  |  |\n| TSFATPADD | ING |  |  |\n| CIIPPOR | TAL | AM | FOS |"
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 3,
+                "y1": 31,
+                "x2": 321,
+                "y2": 478
+            },
+            "crop_path": "output/PartDrawing/15_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "Note",
+            "confidence": 0.992,
+            "bbox": {
+                "x1": 240,
+                "y1": 383,
+                "x2": 614,
+                "y2": 489
+            },
+            "crop_path": "output/Note/15_3.png",
+            "ocr_content": ""
+        }
+    ]
+}

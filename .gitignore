@@ -1,8 +1,6 @@
 # Loại bỏ thư mục chứa model weights (nặng)
 src/model/
 
-# Loại bỏ thư mục chứa kết quả dự đoán (output)
-src/output_inference/
 
 # Loại bỏ môi trường ảo (venv) - rất nên làm
 venv/

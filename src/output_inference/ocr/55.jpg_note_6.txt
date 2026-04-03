@@ -1,0 +1,3 @@
+including the correct bolts to mount to
+— DamenCNC part numbers 4228.4229 and 4230
+DCNC Router Z-axis Ballscrew R=XXXX

@@ -1,0 +1,83 @@
+{
+    "image": "53.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 492,
+                "y1": 248,
+                "x2": 796,
+                "y2": 438
+            },
+            "crop_path": "output/PartDrawing/53_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 156,
+                "y1": 113,
+                "x2": 327,
+                "y2": 300
+            },
+            "crop_path": "output/PartDrawing/53_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 124,
+                "y1": 445,
+                "x2": 324,
+                "y2": 662
+            },
+            "crop_path": "output/PartDrawing/53_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 933,
+                "y1": 218,
+                "x2": 998,
+                "y2": 446
+            },
+            "crop_path": "output/PartDrawing/53_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "Note",
+            "confidence": 0.992,
+            "bbox": {
+                "x1": 410,
+                "y1": 684,
+                "x2": 1154,
+                "y2": 847
+            },
+            "crop_path": "output/Note/53_5.png",
+            "ocr_content": "emref Quantity [Title/Name, designation. material. dimension etc [Articte No./Reference\n\nrawn by rece by\n\n \n\n \n\nFile name Date Scale\n\n31-7-2020 41\n\nApproved by - date\n\nas Jansen Kevin Damen 31-7-2020\n\nwww.damencnc.com\n1 187 1787 Edition Sheet\n\n \n\n \n\n \n\n \n\n \n\n1 OF 1"
+        },
+        {
+            "id": 6,
+            "class": "Note",
+            "confidence": 0.99,
+            "bbox": {
+                "x1": 299,
+                "y1": 366,
+                "x2": 522,
+                "y2": 385
+            },
+            "crop_path": "output/Note/53_6.png",
+            "ocr_content": "nly applicable for 40mm shaft couple"
+        }
+    ]
+}

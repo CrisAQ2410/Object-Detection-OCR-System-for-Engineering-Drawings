@@ -1,0 +1,13 @@
+ASSIGNMENT 12 ivision of Machine] __Lecturer ———|_—_Head of Division
+MECHANICAL ENGIHEERSNG DRAWING = : ——
+" Date ou/2/2025 ne Design Than Trong Khanh Dat Or. Nguyén Vo Thinh
+
+DURATION: 150 MINUTES
+REQUIREMENTS:
+
+1, Create an assembly drawing of the gearbox structure based on the components provided in the assignment,
+using landscape A3 paper in accordance with TCVN standards.
+
+2. Chamfers and fillets without specified dimensions should be 2x45° and R2, respectively.
+
+3. For dimensions not indicated in the drawings, students should estimate them as appropriate.

@@ -1,0 +1,44 @@
+{
+    "image": "12.png",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 46,
+                "y1": 160,
+                "x2": 524,
+                "y2": 540
+            },
+            "crop_path": "output/PartDrawing/12_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "Table",
+            "confidence": 0.994,
+            "bbox": {
+                "x1": 538,
+                "y1": 39,
+                "x2": 933,
+                "y2": 252
+            },
+            "crop_path": "output/Table/12_2.png",
+            "ocr_content": "| [1 | [common | pate | [__lexraxozs | | | 1 | _] |  |\n|---|---|---|---|---|---|---|---|\n| ee |  |  |  |  |  |  |  |\n| [2 | | | tatkicker | _[_Aurinivm | asiniong | |__| |  |  |\n| [2 | [Sal | guider | | | 4intong | (aturinium} | | | 1] |\n| [5 | _| | supper | __[_26intong | fAtuminiuey | | | 1 | _] |\n| | | é | | | hterdear | | | Bevelacar-puchases | | | s_| |\n| [= | | | bettsupon__ | [Aluminum | anaifoer__[_1_| |  |  |  |\n| [| | _oa_| | _Auminimroa__| | 2 | | |  |  |  |\n| [10 | |_hondie__[__1.8inionghande | |__| |  |  |  |  |  |\n| [| | conveyorser_[__purenarea___ | | | 1 | _] |  |  |  |"
+        },
+        {
+            "id": 3,
+            "class": "Note",
+            "confidence": 0.97,
+            "bbox": {
+                "x1": 520,
+                "y1": 485,
+                "x2": 954,
+                "y2": 615
+            },
+            "crop_path": "output/Note/12_3.png",
+            "ocr_content": "WG. NO. REV |\nFINAL A\nscales |wach: | sHerv20¢2 |"
+        }
+    ]
+}

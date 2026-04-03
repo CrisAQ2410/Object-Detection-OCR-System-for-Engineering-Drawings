@@ -1,0 +1,174 @@
+{
+    "image": "3.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 410,
+                "y1": 516,
+                "x2": 523,
+                "y2": 640
+            },
+            "crop_path": "output/PartDrawing/3_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 468,
+                "y1": 302,
+                "x2": 576,
+                "y2": 437
+            },
+            "crop_path": "output/PartDrawing/3_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 30,
+                "y1": 381,
+                "x2": 298,
+                "y2": 686
+            },
+            "crop_path": "output/PartDrawing/3_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 48,
+                "y1": 77,
+                "x2": 253,
+                "y2": 377
+            },
+            "crop_path": "output/PartDrawing/3_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 815,
+                "y1": 34,
+                "x2": 957,
+                "y2": 287
+            },
+            "crop_path": "output/PartDrawing/3_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 599,
+                "y1": 58,
+                "x2": 805,
+                "y2": 264
+            },
+            "crop_path": "output/PartDrawing/3_6.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 7,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 276,
+                "y1": 512,
+                "x2": 388,
+                "y2": 638
+            },
+            "crop_path": "output/PartDrawing/3_7.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 8,
+            "class": "Table",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 558,
+                "y1": 440,
+                "x2": 980,
+                "y2": 569
+            },
+            "crop_path": "output/Table/3_8.png",
+            "ocr_content": "| TEM | NO. | aly. | PART | NUMBER | DESCRIPTION |\n|---|---|---|---|---|---|\n| 2 | 1 | C-002 | Keep | Plale |  |\n| 3 | 1 | | | C003 | Piston | Roc |\n| 4 | 1 | | | C-004 | Brasses |  |\n| 5 | 2 | | | C-005 | Bolt |  |\n| 6 | 2 | | | C-006 | Nut |  |\n| T |  |  |  |  |  |"
+        },
+        {
+            "id": 9,
+            "class": "PartDrawing",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 333,
+                "y1": 298,
+                "x2": 429,
+                "y2": 443
+            },
+            "crop_path": "output/PartDrawing/3_9.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 10,
+            "class": "PartDrawing",
+            "confidence": 0.995,
+            "bbox": {
+                "x1": 508,
+                "y1": 53,
+                "x2": 594,
+                "y2": 277
+            },
+            "crop_path": "output/PartDrawing/3_10.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 11,
+            "class": "Note",
+            "confidence": 0.988,
+            "bbox": {
+                "x1": 530,
+                "y1": 566,
+                "x2": 982,
+                "y2": 697
+            },
+            "crop_path": "output/Note/3_11.png",
+            "ocr_content": "S-Technofogy, Inc.\n\nKritia Bitg Goroato AVe\n\nCoby City, Coby\nPhekopines 6000"
+        },
+        {
+            "id": 12,
+            "class": "PartDrawing",
+            "confidence": 0.987,
+            "bbox": {
+                "x1": 610,
+                "y1": 293,
+                "x2": 956,
+                "y2": 432
+            },
+            "crop_path": "output/PartDrawing/3_12.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 13,
+            "class": "PartDrawing",
+            "confidence": 0.982,
+            "bbox": {
+                "x1": 313,
+                "y1": 53,
+                "x2": 460,
+                "y2": 268
+            },
+            "crop_path": "output/PartDrawing/3_13.png",
+            "ocr_content": ""
+        }
+    ]
+}

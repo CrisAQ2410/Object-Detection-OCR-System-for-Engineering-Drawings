@@ -1,0 +1,122 @@
+{
+    "image": "46.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 891,
+                "y1": 367,
+                "x2": 1126,
+                "y2": 597
+            },
+            "crop_path": "output/PartDrawing/46_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 630,
+                "y1": 292,
+                "x2": 869,
+                "y2": 673
+            },
+            "crop_path": "output/PartDrawing/46_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 323,
+                "y1": 380,
+                "x2": 594,
+                "y2": 598
+            },
+            "crop_path": "output/PartDrawing/46_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 287,
+                "y1": 130,
+                "x2": 590,
+                "y2": 356
+            },
+            "crop_path": "output/PartDrawing/46_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 43,
+                "y1": 493,
+                "x2": 338,
+                "y2": 806
+            },
+            "crop_path": "output/PartDrawing/46_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "Note",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 165,
+                "y1": 58,
+                "x2": 333,
+                "y2": 104
+            },
+            "crop_path": "output/Note/46_6.png",
+            "ocr_content": "4x m6x25 DIN 912\n(17Nm tightening torque)"
+        },
+        {
+            "id": 7,
+            "class": "Note",
+            "confidence": 0.992,
+            "bbox": {
+                "x1": 670,
+                "y1": 146,
+                "x2": 994,
+                "y2": 210
+            },
+            "crop_path": "output/Note/46_7.png",
+            "ocr_content": "Maximum transferable torque 353Nm (Mt)\nMaximum transferable Axial force 31kN (Faxial) —"
+        },
+        {
+            "id": 8,
+            "class": "Note",
+            "confidence": 0.983,
+            "bbox": {
+                "x1": 362,
+                "y1": 601,
+                "x2": 642,
+                "y2": 652
+            },
+            "crop_path": "output/Note/46_8.png",
+            "ocr_content": "f\n~~ Remove the 4 bolts, and screw back in\nthese threads to release the cone clamping"
+        },
+        {
+            "id": 9,
+            "class": "Note",
+            "confidence": 0.972,
+            "bbox": {
+                "x1": 396,
+                "y1": 685,
+                "x2": 1151,
+                "y2": 852
+            },
+            "crop_path": "output/Note/46_9.png",
+            "ocr_content": "[Itemret [Quantity [Title/Name, designation, material, dimension etc Article No./Reference\n\n \n\n \n\n \n\n \n\n \n\n \n\nDrawn by Checked by Approved by - date File name Date Scale\nKevin Damen 10-8-2023 1:1\nwww.damencnc.com\n1554 Locking Assembly BK70 dx D Edition |Sheet\n19x47 Lt=45mm 1 OF -"
+        }
+    ]
+}

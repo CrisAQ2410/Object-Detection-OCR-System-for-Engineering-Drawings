@@ -1,0 +1,161 @@
+{
+    "image": "54.png",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 272,
+                "y1": 478,
+                "x2": 701,
+                "y2": 614
+            },
+            "crop_path": "output/PartDrawing/54_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 20,
+                "y1": 24,
+                "x2": 841,
+                "y2": 463
+            },
+            "crop_path": "output/PartDrawing/54_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 898,
+                "y1": 593,
+                "x2": 1169,
+                "y2": 685
+            },
+            "crop_path": "output/PartDrawing/54_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "Note",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 658,
+                "y1": 690,
+                "x2": 1188,
+                "y2": 838
+            },
+            "crop_path": "output/Note/54_4.png",
+            "ocr_content": "ASSIGNMENT 12 ivision of Machine] __Lecturer ———|_—_Head of Division\nMECHANICAL ENGIHEERSNG DRAWING = : ——\n\" Date ou/2/2025 ne Design Than Trong Khanh Dat Or. Nguyén Vo Thinh\n\nDURATION: 150 MINUTES\nREQUIREMENTS:\n\n1, Create an assembly drawing of the gearbox structure based on the components provided in the assignment,\nusing landscape A3 paper in accordance with TCVN standards.\n\n2. Chamfers and fillets without specified dimensions should be 2x45° and R2, respectively.\n\n3. For dimensions not indicated in the drawings, students should estimate them as appropriate."
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 1030,
+                "y1": 33,
+                "x2": 1177,
+                "y2": 574
+            },
+            "crop_path": "output/PartDrawing/54_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 21,
+                "y1": 477,
+                "x2": 276,
+                "y2": 621
+            },
+            "crop_path": "output/PartDrawing/54_6.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 7,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 726,
+                "y1": 495,
+                "x2": 883,
+                "y2": 689
+            },
+            "crop_path": "output/PartDrawing/54_7.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 8,
+            "class": "PartDrawing",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 861,
+                "y1": 16,
+                "x2": 1029,
+                "y2": 579
+            },
+            "crop_path": "output/PartDrawing/54_8.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 9,
+            "class": "PartDrawing",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 318,
+                "y1": 680,
+                "x2": 643,
+                "y2": 830
+            },
+            "crop_path": "output/PartDrawing/54_9.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 10,
+            "class": "PartDrawing",
+            "confidence": 0.994,
+            "bbox": {
+                "x1": 20,
+                "y1": 638,
+                "x2": 303,
+                "y2": 730
+            },
+            "crop_path": "output/PartDrawing/54_10.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 11,
+            "class": "PartDrawing",
+            "confidence": 0.994,
+            "bbox": {
+                "x1": 20,
+                "y1": 726,
+                "x2": 291,
+                "y2": 826
+            },
+            "crop_path": "output/PartDrawing/54_11.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 12,
+            "class": "PartDrawing",
+            "confidence": 0.973,
+            "bbox": {
+                "x1": 314,
+                "y1": 606,
+                "x2": 659,
+                "y2": 690
+            },
+            "crop_path": "output/PartDrawing/54_12.png",
+            "ocr_content": ""
+        }
+    ]
+}

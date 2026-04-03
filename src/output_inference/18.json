@@ -1,0 +1,96 @@
+{
+    "image": "18.png",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 1.0,
+            "bbox": {
+                "x1": 8,
+                "y1": 29,
+                "x2": 460,
+                "y2": 356
+            },
+            "crop_path": "output/PartDrawing/18_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 471,
+                "y1": 33,
+                "x2": 765,
+                "y2": 316
+            },
+            "crop_path": "output/PartDrawing/18_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 431,
+                "y1": 341,
+                "x2": 716,
+                "y2": 697
+            },
+            "crop_path": "output/PartDrawing/18_3.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 9,
+                "y1": 358,
+                "x2": 428,
+                "y2": 617
+            },
+            "crop_path": "output/PartDrawing/18_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "Table",
+            "confidence": 0.996,
+            "bbox": {
+                "x1": 711,
+                "y1": 226,
+                "x2": 968,
+                "y2": 604
+            },
+            "crop_path": "output/Table/18_5.png",
+            "ocr_content": "| INK. | Spat | gear | 5M | SOT | 20PA | 78.5F¥] |  |\n|---|---|---|---|---|---|---|---|\n| |—SS0A7SHSCL4081 |  |  |  |  |  |  |  |\n| INN | . | Spat | gear | 51 | 18T | 20PA | 78.5F¥] |\n| SXF | - | 6208- | 12S1.NC.12_68 |  |  |  |  |\n| Crete | DAN | a7t- | 20K | 1.75 |  |  |  |\n| Crete | DIN | 471 | 33x15 |  |  |  |  |\n| Crete | DAN | 471. | 23K | 1:2 |  |  |  |\n| Crete | DIN | 471 | 30x15 |  |  |  |  |\n| bp | REE |  |  |  |  |  |  |\n| by |  |  |  |  |  |  |  |\n| Do | eo |  |  |  |  |  |  |\n| Poratel | key | Al2 | x8 | x63 | DIN | 6885 |  |\n| Poratel | key | Ald.x | 8x | 63 | DIN | 6885 |  |\n| Courg | lower |  |  |  |  |  |  |\n| 7 | a | c | a |  |  |  |  |\n| Bg | Re |  |  |  |  |  |  |\n| O-ring | DIN | 3771 | - | 35.542.85 |  |  |  |\n| JO-nnng | DIN | 3771 | - | 252.83 |  |  |  |"
+        },
+        {
+            "id": 6,
+            "class": "Note",
+            "confidence": 0.979,
+            "bbox": {
+                "x1": 797,
+                "y1": 46,
+                "x2": 930,
+                "y2": 184
+            },
+            "crop_path": "output/Note/18_6.png",
+            "ocr_content": "Hasson Mahomed Abdeiaiaam 11\n\nHussein Mosod bsa Ekhadary 12\n\naa Ragaay Homey 22\n\nOmar Astrat Atdetmonem 24\n\nMalada Scbhy Saeed 35\n\nMaman Adel Hassan 36"
+        },
+        {
+            "id": 7,
+            "class": "Note",
+            "confidence": 0.973,
+            "bbox": {
+                "x1": 664,
+                "y1": 594,
+                "x2": 959,
+                "y2": 700
+            },
+            "crop_path": "output/Note/18_7.png",
+            "ocr_content": ""
+        }
+    ]
+}

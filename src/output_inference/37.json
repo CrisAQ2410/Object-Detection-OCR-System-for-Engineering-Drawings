@@ -1,0 +1,109 @@
+{
+    "image": "37.jpg",
+    "objects": [
+        {
+            "id": 1,
+            "class": "PartDrawing",
+            "confidence": 1.0,
+            "bbox": {
+                "x1": 968,
+                "y1": 444,
+                "x2": 1110,
+                "y2": 578
+            },
+            "crop_path": "output/PartDrawing/37_1.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 2,
+            "class": "PartDrawing",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 1,
+                "y1": 34,
+                "x2": 379,
+                "y2": 332
+            },
+            "crop_path": "output/PartDrawing/37_2.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 3,
+            "class": "Table",
+            "confidence": 0.999,
+            "bbox": {
+                "x1": 3,
+                "y1": 345,
+                "x2": 383,
+                "y2": 850
+            },
+            "crop_path": "output/Table/37_3.png",
+            "ocr_content": "| Nominal | Output | torque | 44.1 | Nm |  |  |  |\n|---|---|---|---|---|---|---|---|\n| 390 | Lb-in |  |  |  |  |  |  |\n| Max. | Acceleration | Torque | 3 | Times | Nominal | Output | Torque |\n| Emergency | Stop | Torque | 3.4 | times | Nominal | Output | Torgue |\n| Permissible | Input | Speed | RPM |  |  |  |  |\n| Gear | Ratio |  |  |  |  |  |  |\n| Standard | Max | Backlash |  |  |  |  |  |\n| Max. | radial | force |  |  |  |  |  |\n| Max. | axial | force | 422 | N |  |  |  |\n| 95 | Lof |  |  |  |  |  |  |\n| Rated | Life | >10,000 | Hours |  |  |  |  |\n| Operating | Temperature | Range | - |  |  |  |  |\n| Lubrication |  |  |  |  |  |  |  |\n| Degree | of | Protection |  |  |  |  |  |\n| Gearhead | Inertia | 0.127 | Kg-cm2 |  |  |  |  |\n| Efficiency | at | full | load | 85% |  |  |  |\n| Weight | 2.5 | Kg |  |  |  |  |  |\n| No-load | running | torque | 0.3 | N |  |  |  |\n| 2.6 | Lb-in |  |  |  |  |  |  |\n| [unis | [rm |  |  |  |  |  |  |\n| + | 0.1mm | unless | otherwise | specified |  |  |  |"
+        },
+        {
+            "id": 4,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 1054,
+                "y1": 559,
+                "x2": 1189,
+                "y2": 686
+            },
+            "crop_path": "output/PartDrawing/37_4.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 5,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 350,
+                "y1": 78,
+                "x2": 806,
+                "y2": 298
+            },
+            "crop_path": "output/PartDrawing/37_5.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 6,
+            "class": "PartDrawing",
+            "confidence": 0.998,
+            "bbox": {
+                "x1": 418,
+                "y1": 331,
+                "x2": 846,
+                "y2": 643
+            },
+            "crop_path": "output/PartDrawing/37_6.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 7,
+            "class": "PartDrawing",
+            "confidence": 0.997,
+            "bbox": {
+                "x1": 864,
+                "y1": 68,
+                "x2": 1156,
+                "y2": 334
+            },
+            "crop_path": "output/PartDrawing/37_7.png",
+            "ocr_content": ""
+        },
+        {
+            "id": 8,
+            "class": "Note",
+            "confidence": 0.984,
+            "bbox": {
+                "x1": 401,
+                "y1": 689,
+                "x2": 1174,
+                "y2": 844
+            },
+            "crop_path": "output/Note/37_8.png",
+            "ocr_content": "‘emref Quantity —_|Title/Name. designation, material, dimension etc Article No./Reference\n\nChecked by\nKevin Damen\n\n \n\nScale\n1:2\n\n| www.damencnc.com\n5 O 84 [ [ears DCNC-RAG-F70 I=10 Right Angle Gearbox [Eaton [Sheet\n\n(60x60mm} 4OF 4\n\nFile name Date\n9-8-2022\n\nJrawn by\n‘as Jansen\n\nApproved by - date\n9-8-2022"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+Itemref Quantity [Title/Name. designation. material, dimension ete [Article No./Reference
+
+ 
+
+Date Scale
+24-3-2020 1:1
+
+File name
+
+Drawn by Checked by Approved by - date
+Kevin Damen
+
+ 
+
+ 
+
+Revison history”
+
+ 
+
+ 
+
+V2 Has central 30.02mm bore to fit 520022 bearing, and better defined chamfers
+1 O 4 6 VV 2 1046 WormGearbox 40 adapterplate Edition |Sheet
+to mount NEMA34 Mfount - V2.0
+
+1 OF 1

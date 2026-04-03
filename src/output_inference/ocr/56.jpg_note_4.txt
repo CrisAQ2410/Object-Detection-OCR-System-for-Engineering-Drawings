@@ -1,1 +1,0 @@
-V40_ Shaft D=19mm Ltotaal=147mm +Keyway D=10mm L=65mI!

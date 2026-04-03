@@ -1,4 +1,0 @@
-oe os
-Including M5x20 bolts to attach
-
-a NEMA 34 steppermotor

@@ -1,5 +1,0 @@
-The plane of the keyway
-is Aligned to the bottom
-of the Teeth
-
-Within +/-0,1 degrees

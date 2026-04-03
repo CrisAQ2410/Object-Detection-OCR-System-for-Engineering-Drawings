@@ -1,6 +1,0 @@
-Tolerances. +/-0.imm unless specified otherwise
-Material: Aluminium 6082
-
-Tumbling: No
-
-Surface Finish: Anodize Clear/Blank

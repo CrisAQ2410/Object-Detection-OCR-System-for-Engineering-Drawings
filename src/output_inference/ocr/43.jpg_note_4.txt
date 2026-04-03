@@ -1,2 +1,0 @@
-AARNING: Do not fully compress the 2 hubs.
-The minimum mounted length should be 65mm to retain flexibil

@@ -1,8 +1,0 @@
-gradio>=3.50
-paddlepaddle
-paddleocr
-torch
-torchvision
-opencv-python-headless
-Pillow
-numpy

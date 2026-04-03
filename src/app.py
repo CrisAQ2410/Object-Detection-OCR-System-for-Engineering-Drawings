@@ -1,25 +1,27 @@
-import os
-import json
-import logging
+import os, json, logging, subprocess, sys
 from pathlib import Path
-
-# Ngăn OCR bắn log spam
-logging.getLogger('ppocr').setLevel(logging.ERROR)
-
 import numpy as np
 import cv2
 from PIL import Image, ImageOps
 import gradio as gr
 
-try:
-    import torch
-except ImportError as e:
-    print(f"[!] Lỗi kết xuất mạng Nơ-ron: {e}")
+# Tắt log spam
+logging.getLogger('ppocr').setLevel(logging.ERROR)
+logging.getLogger('paddle').setLevel(logging.ERROR)
 
+# --- Cài detectron2 (Giữ nguyên logic của bạn) ---
 try:
-    from paddleocr import PaddleOCR
+    import detectron2
 except ImportError:
-    print("[!] CẢNH BÁO: Không tìm thấy PaddleOCR.")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", 
+    "git+https://github.com/facebookresearch/detectron2.git", "--no-build-isolation", "--quiet"])
+
+from detectron2.engine import DefaultPredictor
+from detectron2.config import get_cfg
+from detectron2 import model_zoo
+from detectron2.data import MetadataCatalog
+from detectron2.utils.visualizer import Visualizer, ColorMode
+from paddleocr import PaddleOCR
 
 # ========================================================
 # BIẾN TOÀN CỤC & TỪ ĐIỂN MÀU
@@ -34,18 +36,17 @@ THING_COLORS = [(255, 255, 0), (0, 255, 255), (255, 0, 0)]
 def init_models():
     global PREDICTOR, OCR_ENGINE
     
-    # Kỹ thuật Lazy Install: Xây Detectron2 trong tĩnh lặng để lừa Timeout của Hugging Face
-    try:
-        import detectron2
-    except ImportError:
-        print("\n⏳ Hệ thống đang lắp ráp Cõi Lõi Detectron2 (Chỉ tốn 3-4 phút lần đầu bật App)...")
-        import subprocess, sys
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "ninja"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-build-isolation", "git+https://github.com/facebookresearch/detectron2.git"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        import detectron2
-        print("[+] Lắp ráp HOÀN TẤT!")
+    # 1. Detectron2 Engine Load (Fast R-CNN)
+    weights_path = "./output/model/model_final.pth"
+    if not os.path.exists(weights_path):
+        alt_path = Path(__file__).parent / "output/model/model_final.pth"
+        if alt_path.exists():
+            weights_path = str(alt_path)
+    if not os.path.exists(weights_path):
+        # Fallback siêu mạnh: Nằm ngay ngoài gốc của Hugging Face
+        if os.path.exists("model_final.pth"):
+            weights_path = "model_final.pth"
 
-<<<<<<< HEAD
     if not os.path.exists(weights_path):
         print(f"[!] ❌ KHÔNG THỂ KHỞI TẠO! Thiếu tệp Trọng số: {weights_path}")
     else:
@@ -63,85 +64,98 @@ def init_models():
             thing_colors=THING_COLORS
         )
         print("[✓] Máy Chủ Nhận Diện (Detectron2) đã Sẵn sàng.")
-=======
-    from detectron2.engine import DefaultPredictor
-    from detectron2.config import get_cfg
-    from detectron2 import model_zoo
-    from detectron2.data import MetadataCatalog
-    
-    if PREDICTOR is None:
-        # 1. Detectron2 Engine Load (Fast R-CNN)
-        weights_path = "./output/model/model_final.pth"
-        if not os.path.exists(weights_path):
-            alt_path = Path(__file__).parent / "output/model/model_final.pth"
-            if alt_path.exists():
-                weights_path = str(alt_path)
-        if not os.path.exists(weights_path):
-            if os.path.exists("model_final.pth"):
-                weights_path = "model_final.pth"
-
-        if not os.path.exists(weights_path):
-            print(f"[!] ❌ KHÔNG THỂ KHỞI TẠO! Thiếu tệp Trọng số: {weights_path}")
-        else:
-            cfg = get_cfg()
-            cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"))
-            cfg.MODEL.ROI_HEADS.NUM_CLASSES = 3
-            cfg.MODEL.WEIGHTS = weights_path
-            cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
-            
-            if not torch.cuda.is_available():
-                cfg.MODEL.DEVICE = 'cpu'
-                
-            PREDICTOR = DefaultPredictor(cfg)
-            
-            MetadataCatalog.get("gradio_inference").set(
-                thing_classes=["Note", "PartDrawing", "Table"], 
-                thing_colors=THING_COLORS
-            )
-            print("[✓] Máy Chủ Nhận Diện (Detectron2) đã Sẵn sàng.")
->>>>>>> 910416562aa4e127ae7a9689d2e948eb7a3ef4b5
         
     # 2. PaddleOCR Engine Load
     try:
-        # Tắt OneDNN (Hệ thống tối ưu CPU của Intel) vì Docker Hugging Face CPU bị xung đột C++
-        os.environ["FLAGS_use_mkldnn"] = "0"
-        OCR_ENGINE = PaddleOCR(use_textline_orientation=True, lang='en', enable_mkldnn=False)
+        OCR_ENGINE = PaddleOCR(use_textline_orientation=True, lang='en')
         print("[✓] Máy Chủ Cào Chữ (PaddleOCR) đã Sẵn sàng.")
     except Exception as e:
         print(f"[!] Lỗi khởi chạy Máy Chủ OCR: {e}")
 
-# Init Model Delay (Bypass Proxy HF timeout)
-# init_models() được ngắt để chuyển vào luồng Inference
+# Kích hoạt Nạp Model duy nhất 1 lần khi server Gradio bật
+init_models()
 
 
 # ========================================================
 # OCR PROCESSING LOGIC RE-USE
 # ========================================================
 def process_note_paddle(ocr_result):
-    if not ocr_result or not ocr_result[0]: return ""
+    # Kiểm tra an toàn đầu vào
+    if not ocr_result or not isinstance(ocr_result, list) or not ocr_result[0]:
+        return ""
+    
     lines = []
     for line in ocr_result[0]:
-        box, text_info = line[0], line[1]
-        text = text_info[0]
-        y_min = min(p[1] for p in box)
-        lines.append({'y': y_min, 'text': text})
+        # line phải có dạng [ [tọa_độ], (chữ, độ_tin_cậy) ]
+        if not isinstance(line, (list, tuple)) or len(line) < 2:
+            continue
+            
+        box = line[0]
+        text_info = line[1]
+        
+        # Lấy chữ an toàn
+        text = text_info[0] if isinstance(text_info, (list, tuple)) else str(text_info)
+        
+        try:
+            # Kiểm tra p có phải là list tọa độ [x, y] không trước khi lấy p[1]
+            y_coords = [p[1] for p in box if isinstance(p, (list, tuple)) and len(p) >= 2]
+            
+            if not y_coords:
+                continue
+                
+            y_min = min(y_coords)
+            lines.append({'y': y_min, 'text': text})
+        except (IndexError, TypeError):
+            continue
+
+    if not lines:
+        return ""
+        
+    # Sắp xếp theo thứ tự dòng từ trên xuống dưới
     lines.sort(key=lambda x: x['y'])
     return "\n".join(x['text'] for x in lines)
 
 def cluster_table_paddle(ocr_result):
-    if not ocr_result or not ocr_result[0]: return ""
+    # 1. Kiểm tra nếu OCR không tìm thấy gì hoặc kết quả bị lỗi
+    if not ocr_result or not isinstance(ocr_result, list) or not ocr_result[0]: 
+        return ""
+    
     boxes = []
-    for line in ocr_result[0]:
-        box, text = line[0], line[1][0]
-        y_coords = [p[1] for p in box]
-        x_coords = [p[0] for p in box]
-        y_min, y_max = min(y_coords), max(y_coords)
-        boxes.append({
-            'x_left': min(x_coords),
-            'y_center': (y_min + y_max) / 2,
-            'height': y_max - y_min,
-            'text': text
-        })
+    results = ocr_result[0]
+    
+    for line in results:
+        # 2. Kiểm tra cấu hình dòng: line phải là [box, (text, score)]
+        if not isinstance(line, (list, tuple)) or len(line) < 2:
+            continue
+            
+        box = line[0]
+        # 3. QUAN TRỌNG: Kiểm tra box có phải là danh sách 4 điểm tọa độ không
+        if not isinstance(box, (list, tuple)) or len(box) < 4:
+            continue
+            
+        try:
+            # Lấy text an toàn
+            text = line[1][0] if isinstance(line[1], (list, tuple)) else str(line[1])
+            
+            # Kiểm tra từng điểm p trong box có phải là [x, y] không
+            y_coords = [p[1] for p in box if isinstance(p, (list, tuple)) and len(p) >= 2]
+            x_coords = [p[0] for p in box if isinstance(p, (list, tuple)) and len(p) >= 2]
+            
+            if not y_coords or not x_coords:
+                continue
+
+            y_min, y_max = min(y_coords), max(y_coords)
+            boxes.append({
+                'x_left': min(x_coords),
+                'y_center': (y_min + y_max) / 2,
+                'height': y_max - y_min,
+                'text': text
+            })
+        except Exception as e:
+            print(f"Lỗi khi xử lý dòng OCR: {e}")
+            continue
+            
+    if not boxes: return ""
         
     boxes.sort(key=lambda b: b['y_center'])
     rows, current_row, row_y, row_h = [], [], None, None
@@ -183,11 +197,8 @@ def preprocess_for_ocr(crop_img, obj_class):
 # CORE PIPELINE KHI NHẤN BUTTON GRADIO
 # ========================================================
 def analyze_image(img_path):
-    if PREDICTOR is None or OCR_ENGINE is None:
-        init_models()
-        
     if PREDICTOR is None:
-        return None, {"error": "Trọng số Detectron2 bị mất."}, "Lỗi: KHÔNG có MODEL_FINAL.PTH trên HuggingFace Spaces!"
+        return None, {"error": "Trọng số Detectron2 bị mất. Xem lại console."}, "Lỗi: KHÔNG có MODEL_FINAL.PTH.\nHãy chắc chắn ./output/model/model_final.pth hiện hữu trên Hugging Face Spaces!"
         
     if not img_path:
         return None, {}, "Vui lòng tải ảnh lên trước khi phân tích."
@@ -196,9 +207,6 @@ def analyze_image(img_path):
     with Image.open(img_path) as pil_img:
         pil_img = ImageOps.exif_transpose(pil_img).convert('RGB')
         img_bgr = np.array(pil_img)[:, :, ::-1]
-        
-    from detectron2.utils.visualizer import Visualizer, ColorMode
-    from detectron2.data import MetadataCatalog
         
     # [1] Phân tích Predict BBox
     outputs = PREDICTOR(img_bgr)
@@ -230,29 +238,24 @@ def analyze_image(img_path):
         
         # Chỉ áp dụng OCR cho Text Components
         if class_name in ["Note", "Table"] and OCR_ENGINE is not None:
-            crop_img = img_bgr[y1_crop:y2_crop, x1_crop:x2_crop]
-            
-            if crop_img.size > 0:
-                prep_img = preprocess_for_ocr(crop_img, class_name)
-                
-                try:
-                    ocr_res = OCR_ENGINE.ocr(prep_img)
+            try:
+                crop_img = img_bgr[y1_crop:y2_crop, x1_crop:x2_crop]
+                if crop_img.size > 0:
+                    prep_img = preprocess_for_ocr(crop_img, class_name)
+                    ocr_res = OCR_ENGINE.ocr(prep_img, det=True, rec=True)
+                    
+                    # Gọi hàm xử lý an toàn
                     text_str = process_note_paddle(ocr_res) if class_name == "Note" else cluster_table_paddle(ocr_res)
-                except Exception as e:
-                    print(f"PaddleOCR bị sập: {e}. Đang vớt bằng Pytesseract...")
-                    try:
-                        import pytesseract
-                        text_str = pytesseract.image_to_string(prep_img).strip()
-                    except Exception as fallback_e:
-                        text_str = f"(Lỗi trích xuất chữ: {str(e)[:50]})"
-                
-                obj_dict["ocr_content"] = text_str
-                
-                # Append to Formatted Text Block
-                ocr_merged_text.append(f"=== {class_name} (id={i+1}) ===")
-                ocr_merged_text.append(text_str)
-                ocr_merged_text.append("\n")
-                
+                    obj_dict["ocr_content"] = text_str
+                    
+                    if text_str:
+                        ocr_merged_text.append(f"=== {class_name} (id={i+1}) ===")
+                        ocr_merged_text.append(text_str)
+                        ocr_merged_text.append("\n")
+            except Exception as e:
+                print(f"⚠️ Lỗi OCR tại ID {i+1}: {e}")
+                obj_dict["ocr_content"] = "Lỗi xử lý OCR"
+
         json_objects.append(obj_dict)
         
     out_json = {"image": Path(img_path).name, "objects": json_objects}
@@ -273,7 +276,7 @@ def analyze_image(img_path):
 # ========================================================
 # GIAO DIỆN WEB GRADIO BLOCKS
 # ========================================================
-with gr.Blocks() as demo:
+with gr.Blocks(theme=gr.themes.Base()) as demo:
     gr.Markdown("# Engineering Drawing Analyzer")
     gr.Markdown("Trích xuất thông minh các Box: Note (Vàng) - Table (Đỏ) - PartDrawing (Xanh xám), tự động Cào text lập Bảng Markdown!")
     gr.Markdown("⚠️ **Running on CPU, may be slow ~30s per image**")
@@ -300,5 +303,5 @@ with gr.Blocks() as demo:
     )
 
 if __name__ == "__main__":
-    # Cuối cùng chạy
-    demo.launch()
+    # Cuối cùng chạy Launch server
+    demo.launch(server_name="0.0.0.0", server_port=7860, ssr_mode=False)

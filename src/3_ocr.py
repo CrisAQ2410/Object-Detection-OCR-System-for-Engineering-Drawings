@@ -239,7 +239,7 @@ def execute_ocr(img, use_gpu, obj_class):
             ocr_engines['paddle'] = PaddleOCR(use_textline_orientation=True, lang='en', use_gpu=use_gpu, show_log=False)
             
         paddle = ocr_engines['paddle']
-        ocr_result = paddle.ocr(img, cls=True)
+        ocr_result = paddle.ocr(img)
         
         if obj_class == "Note":
             content = process_note_paddle(ocr_result)

@@ -1,11 +1,16 @@
-# Visual Studio Code
-.vscode/
+# Loại bỏ thư mục chứa model weights (nặng)
+src/model/
 
-# Virtual Environment
+# Loại bỏ thư mục chứa kết quả dự đoán (output)
+src/output_inference/
+
+# Loại bỏ môi trường ảo (venv) - rất nên làm
 venv/
-env/
-__pycache__/
-*.pyc
 
-# Model weights
-model/
+# Loại bỏ dữ liệu huấn luyện (nếu Dataset nặng)
+Dataset/
+
+# Loại bỏ các file tạm của python
+__pycache__/
+*.py[cod]
+*$py.class

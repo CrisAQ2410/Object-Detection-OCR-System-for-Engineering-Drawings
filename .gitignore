@@ -6,3 +6,6 @@ venv/
 env/
 __pycache__/
 *.pyc
+
+# Model weights
+model/
